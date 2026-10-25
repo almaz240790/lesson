@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+app/dist
+app/dist-web
+app/dev-dist
+app/ios/App/App/public
+app/ios/App/App/capacitor.config.json
+app/ios/App/Pods
+app/ios/App/App.xcworkspace
+app/ios/App/build
+app/ios/App/.build
+app/ios/App/DerivedData
+*.log
+.claude/

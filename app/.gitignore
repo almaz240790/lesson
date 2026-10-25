@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-web
+dev-dist
+*.log
+ios/App/App/public
+ios/App/App/capacitor.config.json
+ios/App/Pods
+ios/App/App.xcworkspace
+ios/App/build
+ios/App/.build
+ios/App/DerivedData
