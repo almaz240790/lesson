@@ -1,6 +1,6 @@
 // Собирает уроки, практику и глоссарий из Markdown-папок 01–07 в src/content/*.generated.json.
 // Запуск: node scripts/build-content.mjs  (из папки app)
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -8,6 +8,16 @@ const here = dirname(fileURLToPath(import.meta.url))
 const root = join(here, '..', '..')
 const out = join(here, '..', 'src', 'content')
 mkdirSync(out, { recursive: true })
+
+// На хостинге (Railway и т.п.) папок курса рядом нет: используем сохранённые JSON из src/content.
+if (!existsSync(join(root, '01_Основы'))) {
+  if (!existsSync(join(out, 'steps.generated.json'))) {
+    console.error('Нет ни папок курса, ни сохранённого контента в src/content.')
+    process.exit(1)
+  }
+  console.log('Папки курса не найдены, контент не пересобран: используются сохранённые JSON из src/content.')
+  process.exit(0)
+}
 
 const STEPS = [
   { id: '01', dir: '01_Основы', title: 'Основы', short: 'Биржа, ордера, комиссии, свечи, таймфреймы' },
