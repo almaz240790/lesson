@@ -1,0 +1,96 @@
+# Облачная сборка iOS в Codemagic (https://codemagic.io).
+# Репозиторий: папка курса; приложение лежит в app/, iOS-проект в app/ios (Capacitor 6 + CocoaPods).
+#
+# Сценарии:
+#   ios-check      — проверочная сборка под симулятор без подписи. Аккаунт Apple не нужен.
+#   ios-testflight — подписанная сборка и отправка в TestFlight. Нужны аккаунт Apple Developer
+#                    и интеграция App Store Connect в Codemagic (Teams → Integrations → Apple Developer Portal).
+
+definitions:
+  env_versions: &env_versions
+    xcode: latest
+    node: 20
+    cocoapods: default
+  web_build: &web_build
+    name: Сборка веб-приложения и синхронизация с iOS
+    script: |
+      cd app
+      npm ci
+      npm run build
+      npx cap sync ios
+  pods: &pods
+    name: CocoaPods
+    script: |
+      cd app/ios/App
+      pod install --repo-update
+
+workflows:
+  ios-check:
+    name: iOS — проверочная сборка (без подписи)
+    instance_type: mac_mini_m2
+    max_build_duration: 45
+    environment:
+      <<: *env_versions
+    cache:
+      cache_paths:
+        - $HOME/Library/Caches/CocoaPods
+        - $CM_BUILD_DIR/app/node_modules
+    scripts:
+      - *web_build
+      - *pods
+      - name: Сборка под симулятор
+        script: |
+          cd app/ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            -derivedDataPath build build | xcpretty && exit ${PIPESTATUS[0]}
+      - name: Упаковка .app для скачивания
+        script: |
+          cd app/ios/App/build/Build/Products/Debug-iphonesimulator
+          zip -qr $CM_BUILD_DIR/TradingFromZero-simulator.zip App.app
+    artifacts:
+      - TradingFromZero-simulator.zip
+
+  ios-testflight:
+    name: iOS — TestFlight / App Store
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: Apple Developer Portal
+    environment:
+      <<: *env_versions
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: ru.tradingfromzero.app
+      vars:
+        APP_STORE_APPLE_ID: 0000000000 # Apple ID приложения из App Store Connect (цифры), подставьте свой
+    cache:
+      cache_paths:
+        - $HOME/Library/Caches/CocoaPods
+        - $CM_BUILD_DIR/app/node_modules
+    scripts:
+      - *web_build
+      - *pods
+      - name: Номер сборки = число сборок в TestFlight + 1
+        script: |
+          cd app/ios/App
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
+          agvtool new-version -all $((LATEST + 1))
+      - name: Профили подписи
+        script: |
+          cd app/ios/App
+          xcode-project use-profiles
+      - name: Сборка .ipa
+        script: |
+          cd app/ios/App
+          xcode-project build-ipa --workspace App.xcworkspace --scheme App
+    artifacts:
+      - app/ios/App/build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        beta_groups: []
+        submit_to_app_store: false

@@ -11,7 +11,8 @@
     "candles": "node scripts/fetch-candles.mjs",
     "icons": "node scripts/make-icons.mjs",
     "lint": "oxlint",
-    "start": "serve dist -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
+    "start": "serve dist -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard",
+    "ios:assets": "node scripts/make-ios-assets.mjs"
   },
   "dependencies": {
     "@capacitor/cli": "^6.2.2",

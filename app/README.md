@@ -54,9 +54,27 @@ railway domain --service web        # показать или создать д�
 поэтому после правок Markdown сначала `npm run content`, затем `railway up`.
 На iPhone: открыть адрес в Safari → Поделиться → «На экран Домой».
 
-## iOS (Capacitor)
-Проект под iOS уже создан в папке `ios/` (Capacitor 6, пакеты через Swift Package Manager, CocoaPods не нужен).
-Выбран Capacitor 6, потому что он работает с Xcode 15, а Capacitor 7–8 требуют Xcode 16 и macOS 14+.
+## iOS без Xcode: облачная сборка в Codemagic
+Конфиг лежит в корне репозитория: `codemagic.yaml`. Два сценария:
+- **ios-check** — проверочная сборка под симулятор, без подписи и без аккаунта Apple. Нужна, чтобы убедиться, что проект собирается.
+- **ios-testflight** — подписанная сборка и отправка в TestFlight (оттуда ставится на iPhone и подаётся в App Store).
+
+Порядок:
+1. Код должен лежать в Git-репозитории на GitHub (или GitLab/Bitbucket).
+2. На https://codemagic.io войдите через GitHub, Add application → выберите репозиторий → «Codemagic YAML».
+3. Запустите workflow **ios-check**. Если он зелёный, проект собирается.
+4. Для TestFlight: аккаунт Apple Developer (99 $/год). В App Store Connect создайте приложение с Bundle ID `ru.tradingfromzero.app`,
+   запишите его Apple ID (число) в `codemagic.yaml` → `APP_STORE_APPLE_ID`.
+   В Codemagic: Teams → Integrations → Apple Developer Portal → подключите ключ App Store Connect API (создаётся в App Store Connect → Users and Access → Integrations).
+   Имя интеграции должно совпадать с `app_store_connect: Apple Developer Portal` в yaml.
+5. Запустите **ios-testflight**. Сборка появится в TestFlight через 10–20 минут; на iPhone ставится приложением TestFlight.
+
+Иконка и экран запуска генерируются скриптом `npm run ios:assets` (белые свечи на синем фоне). Замените файлы в
+`ios/App/App/Assets.xcassets`, если нужен свой дизайн.
+
+## iOS локально (Capacitor)
+Проект под iOS в папке `ios/` (Capacitor 6 + CocoaPods). Выбран Capacitor 6, потому что он работает с Xcode 15, а Capacitor 7–8 требуют Xcode 16 и macOS 14+.
+Для локальной сборки нужен CocoaPods: `sudo gem install cocoapods`, затем `cd ios/App && pod install`.
 
 Что нужно на Mac:
 1. Xcode 15.2 (последний для macOS 13). В App Store его нет, скачайте вручную: https://developer.apple.com/download/all/ → «Xcode 15.2» (нужен бесплатный Apple ID).
