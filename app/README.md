@@ -42,6 +42,18 @@ src/
 scripts/        build-content, fetch-candles, make-icons
 ```
 
+## Публикация на Railway
+Сайт: https://web-production-045f4.up.railway.app (проект `trading-from-zero`, сервис `web`).
+Деплой идёт прямо из папки `app` через Railway CLI, GitHub не обязателен:
+```bash
+railway up --service web --detach   # загрузить и собрать текущую версию
+railway logs --build --service web  # лог сборки
+railway domain --service web        # показать или создать домен
+```
+Сборка на Railway использует сохранённый контент из `src/content/*.generated.json` (папок курса там нет),
+поэтому после правок Markdown сначала `npm run content`, затем `railway up`.
+На iPhone: открыть адрес в Safari → Поделиться → «На экран Домой».
+
 ## iOS (Capacitor)
 Проект под iOS уже создан в папке `ios/` (Capacitor 6, пакеты через Swift Package Manager, CocoaPods не нужен).
 Выбран Capacitor 6, потому что он работает с Xcode 15, а Capacitor 7–8 требуют Xcode 16 и macOS 14+.
