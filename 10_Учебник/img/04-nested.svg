@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 405" width="760" height="405" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="Коррекция на 1D выглядит нисходящим трендом на 4H">
+<rect width="760" height="405" fill="#ffffff"/>
+<defs><marker id="arr0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b91c1c"/></marker></defs>
+<rect x="14.0" y="72.0" width="350.0" height="250.0" fill="none" stroke="#e5e7eb" rx="4" stroke-width="1.25"/>
+<rect x="404.0" y="72.0" width="342.0" height="250.0" fill="none" stroke="#e5e7eb" rx="4" stroke-width="1.25"/>
+<rect x="244.0" y="86.0" width="106.0" height="136.0" fill="none" stroke="#b91c1c" rx="4" stroke-width="1.75"/>
+<polyline points="40.0,290.0 118.0,172.0 190.0,240.0 262.0,108.0 332.0,198.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="404.0" y1="96.0" x2="746.0" y2="96.0" stroke="#9ca3af" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="404.0" y1="298.0" x2="746.0" y2="298.0" stroke="#9ca3af" stroke-width="1.25" stroke-dasharray="5 4"/>
+<polyline points="420.0,96.0 446.7,247.5 473.3,126.3 500.0,195.0 526.7,130.3 553.3,209.1 580.0,156.6 606.7,252.6 633.3,178.8 660.0,298.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="633.3" y1="178.8" x2="734.0" y2="178.8" stroke="#b91c1c" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="660.0" y1="298.0" x2="708.0" y2="156.6" stroke="#b91c1c" stroke-width="2" marker-end="url(#arr0)"/>
+<line x1="350.0" y1="86.0" x2="404.0" y2="72.0" stroke="#b91c1c" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="350.0" y1="222.0" x2="404.0" y2="322.0" stroke="#b91c1c" stroke-width="1.25" stroke-dasharray="5 4"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">Коррекция на 1D выглядит нисходящим трендом на 4H</text>
+<text x="14.0" y="58.0" font-size="15" text-anchor="start" fill="#2563eb" font-weight="700">1D</text>
+<text x="404.0" y="58.0" font-size="15" text-anchor="start" fill="#2563eb" font-weight="700">4H: тот же отрезок</text>
+<circle cx="40.0" cy="290.0" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="40.0" y="310.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">HL</text>
+<circle cx="118.0" cy="172.0" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="118.0" y="162.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">HH</text>
+<circle cx="190.0" cy="240.0" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="190.0" y="260.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">HL</text>
+<circle cx="262.0" cy="108.0" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="262.0" y="98.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">HH</text>
+<circle cx="332.0" cy="198.0" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="332.0" y="218.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">HL</text>
+<text x="297.0" y="242.0" font-size="13" text-anchor="middle" fill="#b91c1c" font-weight="700">коррекция</text>
+<text x="740.0" y="91.0" font-size="12" text-anchor="end" fill="#2563eb" font-weight="700">HH</text>
+<text x="740.0" y="313.0" font-size="12" text-anchor="end" fill="#15803d" font-weight="700">HL</text>
+<circle cx="473.3" cy="126.3" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="473.3" y="117.3" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">LH</text>
+<circle cx="526.7" cy="130.3" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="526.7" y="121.3" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">LH</text>
+<circle cx="553.3" cy="209.1" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="553.3" y="228.1" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">LL</text>
+<circle cx="580.0" cy="156.6" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="580.0" y="147.6" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">LH</text>
+<circle cx="606.7" cy="252.6" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="606.7" y="271.6" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">LL</text>
+<circle cx="633.3" cy="178.8" r="4" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="633.3" y="169.8" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="700">LH</text>
+<circle cx="660.0" cy="298.0" r="4" fill="#15803d" stroke="#ffffff" stroke-width="1.5"/>
+<text x="660.0" y="317.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="700">LL</text>
+<text x="738.0" y="113.0" font-size="11.5" text-anchor="end" fill="#b91c1c" font-weight="600">закрытие выше</text>
+<text x="738.0" y="126.0" font-size="11.5" text-anchor="end" fill="#b91c1c" font-weight="600">последнего LH —</text>
+<text x="738.0" y="139.0" font-size="11.5" text-anchor="end" fill="#b91c1c" font-weight="600">слом вверх</text>
+<text x="189.0" y="350.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="600">1D: тренд восходящий — ищем покупку</text>
+<text x="575.0" y="350.0" font-size="13" text-anchor="middle" fill="#b91c1c" font-weight="600">4H: нисходящий тренд внутри отката —</text>
+<text x="575.0" y="368.0" font-size="13" text-anchor="middle" fill="#b91c1c" font-weight="600">не продаём, ждём слома вверх</text>
+</svg>

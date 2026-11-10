@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 722" width="760" height="722" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="На следующий этап ведёт условие, а не дата">
+<rect width="760" height="722" fill="#ffffff"/>
+<defs><marker id="arr0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker><marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f2937"/></marker><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b91c1c"/></marker></defs>
+<rect x="14.0" y="68.0" width="14.0" height="12.0" fill="#2563eb" stroke="#2563eb" rx="2" stroke-width="1.25"/>
+<rect x="89.0" y="68.0" width="14.0" height="12.0" fill="#b45309" stroke="#b45309" rx="2" stroke-width="1.25"/>
+<rect x="249.8" y="68.0" width="14.0" height="12.0" fill="#15803d" stroke="#15803d" rx="2" stroke-width="1.25"/>
+<rect x="40.0" y="154.0" width="39.7" height="22.0" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="79.7" y="154.0" width="79.3" height="22.0" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="159.0" y="154.0" width="39.7" height="22.0" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="198.7" y="154.0" width="68.0" height="22.0" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="266.7" y="154.0" width="340.0" height="22.0" fill="#b45309" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="606.7" y="154.0" width="113.3" height="22.0" fill="#15803d" stroke="#ffffff" stroke-width="1.5" fill-opacity="0.9"/>
+<rect x="12.0" y="238.0" width="220.0" height="186.0" fill="#ffffff" stroke="#2563eb" rx="8" stroke-width="2"/>
+<rect x="13.0" y="315.0" width="218.0" height="108.0" fill="#eff6ff" stroke="none"/>
+<rect x="270.0" y="238.0" width="220.0" height="186.0" fill="#ffffff" stroke="#2563eb" rx="8" stroke-width="2"/>
+<rect x="271.0" y="315.0" width="218.0" height="108.0" fill="#eff6ff" stroke="none"/>
+<rect x="528.0" y="238.0" width="220.0" height="186.0" fill="#ffffff" stroke="#2563eb" rx="8" stroke-width="2"/>
+<rect x="529.0" y="315.0" width="218.0" height="108.0" fill="#eff6ff" stroke="none"/>
+<rect x="12.0" y="476.0" width="220.0" height="186.0" fill="#ffffff" stroke="#2563eb" rx="8" stroke-width="2"/>
+<rect x="13.0" y="553.0" width="218.0" height="108.0" fill="#eff6ff" stroke="none"/>
+<rect x="270.0" y="476.0" width="220.0" height="186.0" fill="#ffffff" stroke="#b45309" rx="8" stroke-width="2"/>
+<rect x="271.0" y="537.0" width="218.0" height="124.0" fill="#fffbeb" stroke="none"/>
+<rect x="528.0" y="476.0" width="220.0" height="186.0" fill="#ffffff" stroke="#15803d" rx="8" stroke-width="2"/>
+<rect x="529.0" y="553.0" width="218.0" height="108.0" fill="#f0fdf4" stroke="none"/>
+<line x1="606.7" y1="116.0" x2="742.0" y2="116.0" stroke="#b45309" stroke-width="1.75" stroke-dasharray="5 4" marker-end="url(#arr0)"/>
+<line x1="40.0" y1="176.0" x2="720.0" y2="176.0" stroke="#9ca3af" stroke-width="1.5"/>
+<line x1="40.0" y1="176.0" x2="40.0" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="96.7" y1="176.0" x2="96.7" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="153.3" y1="176.0" x2="153.3" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="210.0" y1="176.0" x2="210.0" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="266.7" y1="176.0" x2="266.7" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="323.3" y1="176.0" x2="323.3" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="380.0" y1="176.0" x2="380.0" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="436.7" y1="176.0" x2="436.7" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="493.3" y1="176.0" x2="493.3" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="550.0" y1="176.0" x2="550.0" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="606.7" y1="176.0" x2="606.7" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="663.3" y1="176.0" x2="663.3" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="720.0" y1="176.0" x2="720.0" y2="181.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="13.0" y1="315.0" x2="231.0" y2="315.0" stroke="#2563eb" stroke-width="1"/>
+<line x1="271.0" y1="315.0" x2="489.0" y2="315.0" stroke="#2563eb" stroke-width="1"/>
+<line x1="529.0" y1="315.0" x2="747.0" y2="315.0" stroke="#2563eb" stroke-width="1"/>
+<line x1="13.0" y1="553.0" x2="231.0" y2="553.0" stroke="#2563eb" stroke-width="1"/>
+<line x1="271.0" y1="537.0" x2="489.0" y2="537.0" stroke="#b45309" stroke-width="1"/>
+<line x1="529.0" y1="553.0" x2="747.0" y2="553.0" stroke="#15803d" stroke-width="1"/>
+<line x1="234.0" y1="278.0" x2="268.0" y2="278.0" stroke="#1f2937" stroke-width="1.75" marker-end="url(#arr1)"/>
+<line x1="234.0" y1="516.0" x2="268.0" y2="516.0" stroke="#1f2937" stroke-width="1.75" marker-end="url(#arr1)"/>
+<line x1="492.0" y1="278.0" x2="526.0" y2="278.0" stroke="#1f2937" stroke-width="1.75" marker-end="url(#arr1)"/>
+<line x1="492.0" y1="516.0" x2="526.0" y2="516.0" stroke="#1f2937" stroke-width="1.75" marker-end="url(#arr1)"/>
+<line x1="638.0" y1="424.0" x2="638.0" y2="450.0" stroke="#1f2937" stroke-width="1.75"/>
+<line x1="638.0" y1="450.0" x2="122.0" y2="450.0" stroke="#1f2937" stroke-width="1.75"/>
+<line x1="122.0" y1="450.0" x2="122.0" y2="474.0" stroke="#1f2937" stroke-width="1.75" marker-end="url(#arr1)"/>
+<line x1="638.0" y1="662.0" x2="638.0" y2="688.0" stroke="#b91c1c" stroke-width="1.75" stroke-dasharray="5 4"/>
+<line x1="638.0" y1="688.0" x2="380.0" y2="688.0" stroke="#b91c1c" stroke-width="1.75" stroke-dasharray="5 4"/>
+<line x1="380.0" y1="688.0" x2="380.0" y2="664.0" stroke="#b91c1c" stroke-width="1.75" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">На следующий этап ведёт условие, а не дата</text>
+<text x="14.0" y="50.0" font-size="12" text-anchor="start" fill="#6b7280">Шесть этапов за 12 месяцев при 30–60 минутах в день</text>
+<text x="34.0" y="79.0" font-size="12" text-anchor="start" fill="#1f2937">учёба</text>
+<text x="109.0" y="79.0" font-size="12" text-anchor="start" fill="#1f2937">100 сделок на демо</text>
+<text x="269.8" y="79.0" font-size="12" text-anchor="start" fill="#1f2937">реальный счёт</text>
+<text x="746.0" y="108.0" font-size="12" text-anchor="end" fill="#b45309">дольше, если сделок меньше 4 в неделю</text>
+<text x="59.8" y="148.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="600">1</text>
+<text x="119.3" y="148.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="600">2</text>
+<text x="178.8" y="148.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="600">3</text>
+<text x="232.7" y="148.0" font-size="13" text-anchor="middle" fill="#2563eb" font-weight="600">4</text>
+<text x="436.7" y="148.0" font-size="13" text-anchor="middle" fill="#b45309" font-weight="600">5</text>
+<text x="663.3" y="148.0" font-size="13" text-anchor="middle" fill="#15803d" font-weight="600">6</text>
+<text x="68.3" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">1</text>
+<text x="125.0" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">2</text>
+<text x="181.7" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">3</text>
+<text x="238.3" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">4</text>
+<text x="295.0" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">5</text>
+<text x="351.7" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">6</text>
+<text x="408.3" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">7</text>
+<text x="465.0" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">8</text>
+<text x="521.7" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">9</text>
+<text x="578.3" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">10</text>
+<text x="635.0" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">11</text>
+<text x="691.7" y="195.0" font-size="12" text-anchor="middle" fill="#6b7280">12</text>
+<text x="720.0" y="212.0" font-size="12" text-anchor="end" fill="#6b7280">месяц</text>
+<text x="24.0" y="260.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">1. Фундамент</text>
+<text x="24.0" y="279.0" font-size="12" text-anchor="start" fill="#6b7280">недели 1–3 · главы 1–3</text>
+<text x="24.0" y="295.0" font-size="12" text-anchor="start" fill="#6b7280">ступень 01</text>
+<text x="24.0" y="333.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие:</text>
+<text x="24.0" y="349.0" font-size="12" text-anchor="start" fill="#1f2937">тест ступени на 80%+;</text>
+<text x="24.0" y="364.0" font-size="12" text-anchor="start" fill="#1f2937">практика выполнена</text>
+<text x="282.0" y="260.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">2. Анализ графика</text>
+<text x="282.0" y="279.0" font-size="12" text-anchor="start" fill="#6b7280">недели 4–9 · главы 4–9</text>
+<text x="282.0" y="295.0" font-size="12" text-anchor="start" fill="#6b7280">ступень 02</text>
+<text x="282.0" y="333.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие:</text>
+<text x="282.0" y="349.0" font-size="12" text-anchor="start" fill="#1f2937">тест на 80%+;</text>
+<text x="282.0" y="364.0" font-size="12" text-anchor="start" fill="#1f2937">бланк анализа 10 дней подряд</text>
+<text x="540.0" y="260.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">3. Вход и риск</text>
+<text x="540.0" y="279.0" font-size="12" text-anchor="start" fill="#6b7280">недели 10–12 · главы 10–12</text>
+<text x="540.0" y="295.0" font-size="12" text-anchor="start" fill="#6b7280">ступень 03</text>
+<text x="540.0" y="333.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие:</text>
+<text x="540.0" y="349.0" font-size="12" text-anchor="start" fill="#1f2937">тест на 80%+;</text>
+<text x="540.0" y="364.0" font-size="12" text-anchor="start" fill="#1f2937">20 расчётов позиции без</text>
+<text x="540.0" y="379.0" font-size="12" text-anchor="start" fill="#1f2937">ошибки;</text>
+<text x="540.0" y="394.0" font-size="12" text-anchor="start" fill="#1f2937">10 учебных сделок</text>
+<text x="24.0" y="498.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">4. Система</text>
+<text x="24.0" y="517.0" font-size="12" text-anchor="start" fill="#6b7280">недели 13–16 · главы 13–15</text>
+<text x="24.0" y="533.0" font-size="12" text-anchor="start" fill="#6b7280">ступени 04–06</text>
+<text x="24.0" y="571.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие:</text>
+<text x="24.0" y="587.0" font-size="12" text-anchor="start" fill="#1f2937">тест 04 на 80%+;</text>
+<text x="24.0" y="602.0" font-size="12" text-anchor="start" fill="#1f2937">практика 05;</text>
+<text x="24.0" y="617.0" font-size="12" text-anchor="start" fill="#1f2937">план и карточка сетапа;</text>
+<text x="24.0" y="632.0" font-size="12" text-anchor="start" fill="#1f2937">бэктест от 100 сделок, E &gt; 0</text>
+<text x="282.0" y="498.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">5. Сто сделок на демо</text>
+<text x="282.0" y="517.0" font-size="12" text-anchor="start" fill="#6b7280">месяцы 5–10 · уровень профи 09</text>
+<text x="282.0" y="555.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие:</text>
+<text x="282.0" y="571.0" font-size="12" text-anchor="start" fill="#1f2937">тесты 01–05 на 80%+;</text>
+<text x="282.0" y="586.0" font-size="12" text-anchor="start" fill="#1f2937">100 сделок по плану;</text>
+<text x="282.0" y="601.0" font-size="12" text-anchor="start" fill="#1f2937">95% по правилам;</text>
+<text x="282.0" y="616.0" font-size="12" text-anchor="start" fill="#1f2937">итог 2 месяцев &gt; 0;</text>
+<text x="282.0" y="631.0" font-size="12" text-anchor="start" fill="#1f2937">нет нарушений дневного</text>
+<text x="282.0" y="646.0" font-size="12" text-anchor="start" fill="#1f2937">лимита за месяц</text>
+<text x="540.0" y="498.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="600">6. Первый реальный счёт</text>
+<text x="540.0" y="517.0" font-size="12" text-anchor="start" fill="#6b7280">месяцы 11–12</text>
+<text x="540.0" y="533.0" font-size="12" text-anchor="start" fill="#6b7280">риск 0,5–1%, без плеча</text>
+<text x="540.0" y="571.0" font-size="12" text-anchor="start" fill="#1f2937" font-weight="600">Условие роста:</text>
+<text x="540.0" y="587.0" font-size="12" text-anchor="start" fill="#1f2937">100 сделок по тем же</text>
+<text x="540.0" y="602.0" font-size="12" text-anchor="start" fill="#1f2937">критериям → капитал ×1,5</text>
+<text x="509.0" y="706.0" font-size="12" text-anchor="middle" fill="#b91c1c">правила нарушаются — назад на демо</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 442" width="760" height="442" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="Рыночная покупка 2 BTC съедает три уровня продавцов">
+<rect width="760" height="442" fill="#ffffff"/>
+<rect x="86.0" y="96.0" width="156.0" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="126.0" width="117.0" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="126.0" width="31.2" height="22.0" fill="#b45309" stroke="none" rx="3" fill-opacity="0.85"/>
+<rect x="86.0" y="156.0" width="78.0" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="156.0" width="78.0" height="22.0" fill="#b45309" stroke="none" rx="3" fill-opacity="0.85"/>
+<rect x="86.0" y="186.0" width="46.8" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="186.0" width="46.8" height="22.0" fill="#b45309" stroke="none" rx="3" fill-opacity="0.85"/>
+<rect x="86.0" y="222.0" width="39.0" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="252.0" width="62.4" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="282.0" width="93.6" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="86.0" y="312.0" width="156.0" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="96.0" width="156.0" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="126.0" width="85.8" height="22.0" fill="#ef5350" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="222.0" width="39.0" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="252.0" width="62.4" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="282.0" width="93.6" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="466.0" y="312.0" width="156.0" height="22.0" fill="#26a69a" stroke="none" rx="3" fill-opacity="0.8"/>
+<rect x="14.0" y="390.0" width="14.0" height="14.0" fill="#b45309" stroke="none" rx="2" fill-opacity="0.85"/>
+<line x1="380.0" y1="68.0" x2="380.0" y2="338.0" stroke="#e5e7eb" stroke-width="1.25"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">Рыночная покупка 2 BTC съедает три уровня продавцов</text>
+<text x="14.0" y="50.0" font-size="12" text-anchor="start" fill="#6b7280">Упрощённый стакан BTC/USDT до и после ордера; средняя цена исполнения 60 019</text>
+<text x="164.0" y="82.0" font-size="14" text-anchor="middle" fill="#1f2937" font-weight="600">До ордера</text>
+<text x="76.0" y="112.0" font-size="13" text-anchor="end" fill="#1f2937">60 040</text>
+<text x="248.0" y="112.0" font-size="12" text-anchor="start" fill="#6b7280">2,0</text>
+<text x="76.0" y="142.0" font-size="13" text-anchor="end" fill="#1f2937">60 030</text>
+<text x="209.0" y="142.0" font-size="12" text-anchor="start" fill="#6b7280">1,5</text>
+<text x="76.0" y="172.0" font-size="13" text-anchor="end" fill="#1f2937">60 020</text>
+<text x="170.0" y="172.0" font-size="12" text-anchor="start" fill="#6b7280">1,0</text>
+<text x="76.0" y="202.0" font-size="13" text-anchor="end" fill="#1f2937">60 010</text>
+<text x="138.8" y="202.0" font-size="12" text-anchor="start" fill="#6b7280">0,6</text>
+<text x="76.0" y="238.0" font-size="13" text-anchor="end" fill="#1f2937">60 000</text>
+<text x="131.0" y="238.0" font-size="12" text-anchor="start" fill="#6b7280">0,5</text>
+<text x="76.0" y="268.0" font-size="13" text-anchor="end" fill="#1f2937">59 990</text>
+<text x="154.4" y="268.0" font-size="12" text-anchor="start" fill="#6b7280">0,8</text>
+<text x="76.0" y="298.0" font-size="13" text-anchor="end" fill="#1f2937">59 980</text>
+<text x="185.6" y="298.0" font-size="12" text-anchor="start" fill="#6b7280">1,2</text>
+<text x="76.0" y="328.0" font-size="13" text-anchor="end" fill="#1f2937">59 970</text>
+<text x="248.0" y="328.0" font-size="12" text-anchor="start" fill="#6b7280">2,0</text>
+<text x="544.0" y="82.0" font-size="14" text-anchor="middle" fill="#1f2937" font-weight="600">После ордера</text>
+<text x="456.0" y="112.0" font-size="13" text-anchor="end" fill="#1f2937">60 040</text>
+<text x="628.0" y="112.0" font-size="12" text-anchor="start" fill="#6b7280">2,0</text>
+<text x="456.0" y="142.0" font-size="13" text-anchor="end" fill="#1f2937">60 030</text>
+<text x="557.8" y="142.0" font-size="12" text-anchor="start" fill="#6b7280">1,1</text>
+<text x="456.0" y="172.0" font-size="13" text-anchor="end" fill="#1f2937">60 020</text>
+<text x="466.0" y="172.0" font-size="12" text-anchor="start" fill="#b45309">исполнено</text>
+<text x="456.0" y="202.0" font-size="13" text-anchor="end" fill="#1f2937">60 010</text>
+<text x="466.0" y="202.0" font-size="12" text-anchor="start" fill="#b45309">исполнено</text>
+<text x="456.0" y="238.0" font-size="13" text-anchor="end" fill="#1f2937">60 000</text>
+<text x="511.0" y="238.0" font-size="12" text-anchor="start" fill="#6b7280">0,5</text>
+<text x="456.0" y="268.0" font-size="13" text-anchor="end" fill="#1f2937">59 990</text>
+<text x="534.4" y="268.0" font-size="12" text-anchor="start" fill="#6b7280">0,8</text>
+<text x="456.0" y="298.0" font-size="13" text-anchor="end" fill="#1f2937">59 980</text>
+<text x="565.6" y="298.0" font-size="12" text-anchor="start" fill="#6b7280">1,2</text>
+<text x="456.0" y="328.0" font-size="13" text-anchor="end" fill="#1f2937">59 970</text>
+<text x="628.0" y="328.0" font-size="12" text-anchor="start" fill="#6b7280">2,0</text>
+<text x="164.0" y="362.0" font-size="12" text-anchor="middle" fill="#6b7280">Лучший ask 60 010, лучший bid 60 000, спред 10 $</text>
+<text x="544.0" y="362.0" font-size="12" text-anchor="middle" fill="#6b7280">Лучший ask 60 030, последняя сделка по 60 030</text>
+<text x="34.0" y="402.0" font-size="12" text-anchor="start" fill="#6b7280">объём, который заберёт ордер: 0,6 по 60 010, 1,0 по 60 020, 0,4 по 60 030</text>
+<text x="14.0" y="426.0" font-size="12" text-anchor="start" fill="#6b7280">Красное — продавцы (ask), зелёное — покупатели (bid). Объём справа от полосы указан в BTC.</text>
+</svg>
