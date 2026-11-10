@@ -1,6 +1,6 @@
 // Собирает уроки, практику и глоссарий из Markdown-папок 01–07 в src/content/*.generated.json.
 // Запуск: node scripts/build-content.mjs  (из папки app)
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync, rmSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -27,11 +27,22 @@ const STEPS = [
   { id: '05', dir: '05_Психология', title: 'Психология', short: 'Эмоции, ошибки новичков, дисциплина' },
   { id: '06', dir: '06_Своя_система', title: 'Своя система', short: 'Торговый план, журнал, критерии перехода на реальные деньги' },
   { id: '09', dir: '09_Уровень_профи', title: 'Уровень профи', short: 'Ожидание, бэктест, Монте-Карло, микроструктура, портфель, процесс', standalone: true },
+  { id: '10', dir: '10_Учебник', title: 'Учебник', short: '15 глав с примерами на реальных свечах: от устройства рынка до своей торговой системы', standalone: true, book: true },
 ]
 
 const read = (p) => readFileSync(p, 'utf8').replace(/\r\n/g, '\n')
 const titleOf = (md, fallback) => (md.match(/^#\s+(.+)$/m)?.[1] ?? fallback).trim()
 const bodyOf = (md) => md.replace(/^#\s+.+\n/, '').trim()
+// Учебник читается подряд одной страницей, поэтому переходов в нём нет: рисунки копируются в public/textbook,
+// строка «Связь с курсом» убирается, а ссылки на другие главы и уроки курса становятся обычным текстом.
+// Остаются только внешние ссылки на источники.
+const bookBody = (md) =>
+  md
+    .replace(/^\*\*Связь с курсом:\*\*.*\n+/m, '')
+    .replace(/ из строки «Связь с курсом»/g, ' по теме главы')
+    .replace(/\]\(img\/([0-9a-z-]+\.svg)\)/g, '](textbook/$1)')
+    .replace(/(?<!!)\[([^\]]+)\]\((?!https?:|mailto:)[^)\s]+\)/g, '$1')
+
 const checklist = (md) => [...md.matchAll(/^- \[[ x]\]\s+(.+(?:\n {2}.+)*)$/gm)].map((m) => m[1].replace(/\n {2}/g, ' ').trim())
 
 const steps = STEPS.map((s) => {
@@ -42,7 +53,8 @@ const steps = STEPS.map((s) => {
     .map((f) => {
       const md = read(join(dir, f))
       const n = f.slice(0, 2)
-      return { id: `${s.id}-${n}`, file: `${s.dir}/${f.replace(/\.md$/, '')}`, title: titleOf(md, f), body: bodyOf(md) }
+      const body = bodyOf(md)
+      return { id: `${s.id}-${n}`, file: `${s.dir}/${f.replace(/\.md$/, '')}`, title: titleOf(md, f), body: s.book ? bookBody(body) : body }
     })
   const practiceFile = files.find((f) => f === 'Практика.md')
   let practice = null
@@ -57,6 +69,21 @@ const steps = STEPS.map((s) => {
 })
 
 writeFileSync(join(out, 'steps.generated.json'), JSON.stringify(steps, null, 2))
+
+// Рисунки учебника
+for (const s of STEPS.filter((x) => x.book)) {
+  const src = join(root, s.dir, 'img')
+  const dst = join(here, '..', 'public', 'textbook')
+  rmSync(dst, { recursive: true, force: true })
+  mkdirSync(dst, { recursive: true })
+  const sizes = {}
+  for (const f of readdirSync(src).filter((x) => x.endsWith('.svg')).sort()) {
+    copyFileSync(join(src, f), join(dst, f))
+    const m = read(join(src, f)).match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/)
+    if (m) sizes[`textbook/${f}`] = [Math.round(Number(m[1])), Math.round(Number(m[2]))]
+  }
+  writeFileSync(join(out, 'figures.generated.json'), JSON.stringify(sizes, null, 1))
+}
 
 // Справочник
 const refDir = join(root, '07_Справочник')

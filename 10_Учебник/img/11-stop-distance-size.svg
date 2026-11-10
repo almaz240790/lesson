@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570" width="760" height="570" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="Стоп вдвое дальше — позиция вдвое меньше, убыток в долларах тот же">
+<rect width="760" height="570" fill="#ffffff"/>
+<rect x="14.0" y="106.0" width="354.0" height="260.0" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="14.0" y="163.8" width="354.0" height="86.7" fill="#dc2626" stroke="none" fill-opacity="0.15"/>
+<rect x="392.0" y="106.0" width="354.0" height="260.0" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="392.0" y="163.8" width="354.0" height="173.3" fill="#dc2626" stroke="none" fill-opacity="0.15"/>
+<rect x="14.0" y="384.0" width="732.0" height="54.0" fill="#2563eb" stroke="#2563eb" rx="8" stroke-width="1.25" fill-opacity="0.07"/>
+<rect x="14.0" y="460.0" width="300.0" height="26.0" fill="#2563eb" stroke="#2563eb" rx="3" stroke-width="1.25" fill-opacity="0.8"/>
+<rect x="14.0" y="522.0" width="354.0" height="34.0" fill="#b91c1c" stroke="#b91c1c" rx="6" stroke-width="1.25" fill-opacity="0.12"/>
+<rect x="14.0" y="522.0" width="354.0" height="34.0" fill="none" stroke="#b91c1c" rx="6" stroke-width="1.25"/>
+<rect x="392.0" y="460.0" width="150.0" height="26.0" fill="#2563eb" stroke="#2563eb" rx="3" stroke-width="1.25" fill-opacity="0.8"/>
+<rect x="392.0" y="522.0" width="354.0" height="34.0" fill="#b91c1c" stroke="#b91c1c" rx="6" stroke-width="1.25" fill-opacity="0.12"/>
+<rect x="392.0" y="522.0" width="354.0" height="34.0" fill="none" stroke="#b91c1c" rx="6" stroke-width="1.25"/>
+<line x1="14.0" y1="163.8" x2="368.0" y2="163.8" stroke="#2563eb" stroke-width="1.5"/>
+<line x1="14.0" y1="250.4" x2="368.0" y2="250.4" stroke="#b91c1c" stroke-width="1.5"/>
+<polyline points="34.0,214.3 88.9,163.8 143.7,127.7 198.6,192.7 253.5,250.4" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="392.0" y1="163.8" x2="746.0" y2="163.8" stroke="#2563eb" stroke-width="1.5"/>
+<line x1="392.0" y1="337.1" x2="746.0" y2="337.1" stroke="#b91c1c" stroke-width="1.5"/>
+<polyline points="412.0,214.3 455.9,163.8 499.8,127.7 543.7,243.2 587.6,199.9 631.5,337.1" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">Стоп вдвое дальше — позиция вдвое меньше, убыток в долларах тот же</text>
+<text x="14.0" y="50.0" font-size="12" text-anchor="start" fill="#6b7280">Депозит 1 000 $, риск 1% = 10 $, лонг от 60 000</text>
+<text x="191.0" y="92.0" font-size="14" text-anchor="middle" fill="#1f2937" font-weight="700">Близкий стоп, 2%</text>
+<text x="362.0" y="157.8" font-size="12" text-anchor="end" fill="#2563eb" font-weight="600">вход 60 000</text>
+<text x="362.0" y="266.4" font-size="12" text-anchor="end" fill="#b91c1c" font-weight="600">стоп 58 800</text>
+<circle cx="88.9" cy="163.8" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="253.5" cy="250.4" r="4.5" fill="#b91c1c" stroke="#ffffff" stroke-width="1.5"/>
+<text x="328.0" y="212.1" font-size="16" text-anchor="middle" fill="#b91c1c" font-weight="700">−2%</text>
+<text x="569.0" y="92.0" font-size="14" text-anchor="middle" fill="#1f2937" font-weight="700">Далёкий стоп, 4%</text>
+<text x="740.0" y="157.8" font-size="12" text-anchor="end" fill="#2563eb" font-weight="600">вход 60 000</text>
+<text x="740.0" y="353.1" font-size="12" text-anchor="end" fill="#b91c1c" font-weight="600">стоп 57 600</text>
+<circle cx="455.9" cy="163.8" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="631.5" cy="337.1" r="4.5" fill="#b91c1c" stroke="#ffffff" stroke-width="1.5"/>
+<text x="706.0" y="255.4" font-size="16" text-anchor="middle" fill="#b91c1c" font-weight="700">−4%</text>
+<text x="380.0" y="406.0" font-size="14" text-anchor="middle" fill="#1f2937" font-weight="700">Размер позиции = Риск $ / Расстояние до стопа</text>
+<text x="380.0" y="427.0" font-size="14" text-anchor="middle" fill="#2563eb" font-weight="600">10 / 0,02 = 500 $;      10 / 0,04 = 250 $</text>
+<text x="14.0" y="506.0" font-size="12.5" text-anchor="start" fill="#1f2937" font-weight="600">Позиция 500 $ (0,00833 BTC)</text>
+<text x="191.0" y="544.0" font-size="13" text-anchor="middle" fill="#b91c1c" font-weight="700">Убыток по стопу: 10 $ = 1% счёта</text>
+<text x="392.0" y="506.0" font-size="12.5" text-anchor="start" fill="#1f2937" font-weight="600">Позиция 250 $ (0,00416 BTC)</text>
+<text x="569.0" y="544.0" font-size="13" text-anchor="middle" fill="#b91c1c" font-weight="700">Убыток по стопу: 10 $ = 1% счёта</text>
+</svg>

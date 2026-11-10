@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="Накопленный итог рос до 16 декабря 2024 года, затем просел на 9,6R">
+<rect width="760" height="400" fill="#ffffff"/>
+<defs><marker id="arr0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b91c1c"/></marker></defs>
+<rect x="528.6" y="94.0" width="111.4" height="250.0" fill="#b91c1c" stroke="none" fill-opacity="0.07"/>
+<line x1="54.0" y1="344.0" x2="640.0" y2="344.0" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="316.9" x2="640.0" y2="316.9" stroke="#9ca3af" stroke-width="1.5"/>
+<line x1="54.0" y1="289.8" x2="640.0" y2="289.8" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="262.7" x2="640.0" y2="262.7" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="235.6" x2="640.0" y2="235.6" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="208.4" x2="640.0" y2="208.4" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="181.3" x2="640.0" y2="181.3" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="154.2" x2="640.0" y2="154.2" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="127.1" x2="640.0" y2="127.1" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="54.0" y1="100.0" x2="640.0" y2="100.0" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="528.6" y1="94.0" x2="528.6" y2="344.0" stroke="#6b7280" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="54.0" y1="344.0" x2="54.0" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="177.8" y1="344.0" x2="177.8" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="309.9" y1="344.0" x2="309.9" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="318.1" y1="344.0" x2="318.1" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="429.5" y1="344.0" x2="429.5" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="528.6" y1="344.0" x2="528.6" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<line x1="607.0" y1="344.0" x2="607.0" y2="349.0" stroke="#9ca3af" stroke-width="1.25"/>
+<polyline points="54.0,316.9 58.1,322.6 62.3,312.0 66.4,301.5 70.5,307.1 74.6,312.8 78.8,318.4 82.9,307.7 87.0,313.4 91.1,319.0 95.3,324.9 99.4,314.4 103.5,320.3 107.6,309.9 111.8,299.4 115.9,288.7 120.0,294.4 124.2,283.7 128.3,289.3 132.4,294.8 136.5,284.2 140.7,273.6 144.8,279.2 148.9,284.9 153.0,274.4 157.2,263.8 161.3,253.3 165.4,242.5 169.5,248.1 173.7,237.5 177.8,226.8 181.9,232.3 186.1,237.8 190.2,227.0 194.3,216.4 198.4,222.0 202.6,227.5 206.7,216.8 210.8,222.5 214.9,211.7 219.1,217.5 223.2,223.0 227.3,228.5 231.5,234.0 235.6,239.5 239.7,245.0 243.8,250.8 248.0,240.1 252.1,245.7 256.2,251.4 260.3,240.8 264.5,246.4 268.6,235.6 272.7,225.0 276.8,214.3 281.0,203.8 285.1,193.1 289.2,198.8 293.4,204.4 297.5,209.9 301.6,215.4 305.7,221.0 309.9,226.5 314.0,216.0 318.1,221.8 322.2,227.4 326.4,216.9 330.5,222.8 334.6,228.5 338.7,234.2 342.9,223.5 347.0,213.0 351.1,218.9 355.3,208.3 359.4,214.1 363.5,219.8 367.6,225.5 371.8,231.3 375.9,237.0 380.0,226.6 384.1,232.5 388.3,238.1 392.4,227.5 396.5,216.9 400.6,222.7 404.8,228.6 408.9,234.3 413.0,240.0 417.2,229.7 421.3,219.3 425.4,208.7 429.5,198.1 433.7,187.4 437.8,193.0 441.9,182.4 446.0,171.9 450.2,177.4 454.3,166.8 458.4,172.5 462.5,178.4 466.7,184.0 470.8,189.7 474.9,179.2 479.1,185.0 483.2,190.7 487.3,196.6 491.4,186.1 495.6,192.0 499.7,181.4 503.8,187.3 507.9,176.7 512.1,166.1 516.2,155.7 520.3,145.1 524.5,150.6 528.6,156.3 532.7,161.8 536.8,167.4 541.0,172.9 545.1,162.6 549.2,152.2 553.3,157.8 557.5,163.4 561.6,152.8 565.7,158.7 569.8,164.5 574.0,153.8 578.1,159.8 582.2,165.3 586.4,154.8 590.5,160.8 594.6,166.7 598.7,172.3 602.9,177.9 607.0,183.5 611.1,189.3 615.2,178.9 619.4,184.7 623.5,190.3 627.6,179.7 631.7,185.6 635.9,191.3 640.0,197.1" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="520.3" y1="145.1" x2="662.0" y2="145.1" stroke="#6b7280" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="640.0" y1="197.1" x2="662.0" y2="197.1" stroke="#6b7280" stroke-width="1.25" stroke-dasharray="5 4"/>
+<line x1="660.0" y1="146.1" x2="660.0" y2="196.1" stroke="#b91c1c" stroke-width="1.75" marker-end="url(#arr0)"/>
+<line x1="285.1" y1="193.1" x2="413.0" y2="193.1" stroke="#6b7280" stroke-width="1.25" stroke-dasharray="5 4"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">Накопленный итог рос до 16 декабря 2024 года, затем просел на 9,6R</text>
+<text x="14.0" y="50.0" font-size="12" text-anchor="start" fill="#6b7280">Демонстрационный бэктест: 142 сделки, BTC/USDT и ETH/USDT, 2020 — октябрь 2026, результат в R после комиссии</text>
+<text x="46.0" y="348.0" font-size="11.5" text-anchor="end" fill="#6b7280">−5</text>
+<text x="46.0" y="320.9" font-size="11.5" text-anchor="end" fill="#6b7280">0</text>
+<text x="46.0" y="293.8" font-size="11.5" text-anchor="end" fill="#6b7280">5</text>
+<text x="46.0" y="266.7" font-size="11.5" text-anchor="end" fill="#6b7280">10</text>
+<text x="46.0" y="239.6" font-size="11.5" text-anchor="end" fill="#6b7280">15</text>
+<text x="46.0" y="212.4" font-size="11.5" text-anchor="end" fill="#6b7280">20</text>
+<text x="46.0" y="185.3" font-size="11.5" text-anchor="end" fill="#6b7280">25</text>
+<text x="46.0" y="158.2" font-size="11.5" text-anchor="end" fill="#6b7280">30</text>
+<text x="46.0" y="131.1" font-size="11.5" text-anchor="end" fill="#6b7280">35</text>
+<text x="46.0" y="104.0" font-size="11.5" text-anchor="end" fill="#6b7280">40</text>
+<text x="46.0" y="86.0" font-size="11.5" text-anchor="end" fill="#6b7280" font-weight="600">R</text>
+<text x="62.0" y="106.0" font-size="12" text-anchor="start" fill="#2563eb" font-weight="600">Разработка 2020–2024: 115 сделок, +29,6R</text>
+<text x="536.6" y="106.0" font-size="12" text-anchor="start" fill="#b91c1c" font-weight="600">Отложенный отрезок:</text>
+<text x="536.6" y="122.0" font-size="12" text-anchor="start" fill="#b91c1c" font-weight="600">27 сделок, −7,5R</text>
+<text x="57.0" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2020</text>
+<text x="180.8" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2021</text>
+<text x="306.9" y="362.0" font-size="11.5" text-anchor="end" fill="#6b7280">2022</text>
+<text x="321.1" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2023</text>
+<text x="432.5" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2024</text>
+<text x="531.6" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2025</text>
+<text x="610.0" y="362.0" font-size="11.5" text-anchor="start" fill="#6b7280">2026</text>
+<text x="347.0" y="384.0" font-size="11.5" text-anchor="middle" fill="#6b7280">Сделки по порядку; подписи — год первой сделки</text>
+<text x="668.0" y="169.1" font-size="12.5" text-anchor="start" fill="#b91c1c" font-weight="700">−9,6R</text>
+<text x="668.0" y="185.1" font-size="11.5" text-anchor="start" fill="#b91c1c">просадка</text>
+<circle cx="520.3" cy="145.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="510.3" y="133.1" font-size="12" text-anchor="end" fill="#1f2937" font-weight="600">Пик +31,7R: сделка 113, 16 декабря 2024</text>
+<circle cx="640.0" cy="197.1" r="4.5" fill="#b91c1c" stroke="#ffffff" stroke-width="1.5"/>
+<text x="644.0" y="232.8" font-size="12" text-anchor="end" fill="#1f2937" font-weight="600">Конец данных: +22,1R</text>
+<circle cx="285.1" cy="193.1" r="3.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="413.0" cy="240.0" r="3.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="392.4" y="284.4" font-size="11.5" text-anchor="middle" fill="#6b7280">Просадка 8,7R на разработке (точки): ноябрь 2021 — январь 2024</text>
+</svg>

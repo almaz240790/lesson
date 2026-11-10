@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 606" width="760" height="606" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'DejaVu Sans',sans-serif" role="img" aria-label="Десять шагов: ответ «нет» на семи из них заканчивается записью «ждать»">
+<rect width="760" height="606" fill="#ffffff"/>
+<defs><marker id="arr0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker><marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b91c1c"/></marker></defs>
+<rect x="14.0" y="68.0" width="540.0" height="36.0" fill="#6b7280" stroke="#6b7280" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="68.0" width="540.0" height="36.0" fill="none" stroke="#6b7280" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="116.0" width="540.0" height="36.0" fill="#2563eb" stroke="#2563eb" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="116.0" width="540.0" height="36.0" fill="none" stroke="#2563eb" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="164.0" width="540.0" height="36.0" fill="#2563eb" stroke="#2563eb" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="164.0" width="540.0" height="36.0" fill="none" stroke="#2563eb" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="212.0" width="540.0" height="36.0" fill="#2563eb" stroke="#2563eb" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="212.0" width="540.0" height="36.0" fill="none" stroke="#2563eb" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="260.0" width="540.0" height="36.0" fill="#15803d" stroke="#15803d" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="260.0" width="540.0" height="36.0" fill="none" stroke="#15803d" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="308.0" width="540.0" height="36.0" fill="#15803d" stroke="#15803d" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="308.0" width="540.0" height="36.0" fill="none" stroke="#15803d" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="356.0" width="540.0" height="36.0" fill="#15803d" stroke="#15803d" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="356.0" width="540.0" height="36.0" fill="none" stroke="#15803d" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="404.0" width="540.0" height="36.0" fill="#b45309" stroke="#b45309" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="404.0" width="540.0" height="36.0" fill="none" stroke="#b45309" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="452.0" width="540.0" height="36.0" fill="#b45309" stroke="#b45309" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="452.0" width="540.0" height="36.0" fill="none" stroke="#b45309" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="500.0" width="540.0" height="36.0" fill="#b45309" stroke="#b45309" rx="8" stroke-width="1.25" fill-opacity="0.1"/>
+<rect x="14.0" y="500.0" width="540.0" height="36.0" fill="none" stroke="#b45309" rx="8" stroke-width="1.5"/>
+<rect x="630.0" y="68.0" width="116.0" height="372.0" fill="#f59e0b" stroke="#b45309" rx="8" stroke-width="1.5" fill-opacity="0.14"/>
+<rect x="630.0" y="68.0" width="116.0" height="372.0" fill="none" stroke="#b45309" rx="8" stroke-width="1.5"/>
+<rect x="14.0" y="550.0" width="540.0" height="34.0" fill="#16a34a" stroke="#15803d" rx="8" stroke-width="1.5" fill-opacity="0.14"/>
+<rect x="14.0" y="550.0" width="540.0" height="34.0" fill="none" stroke="#15803d" rx="8" stroke-width="1.5"/>
+<line x1="114.0" y1="105.0" x2="114.0" y2="115.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="86.0" x2="628.0" y2="86.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="153.0" x2="114.0" y2="163.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="134.0" x2="628.0" y2="134.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="201.0" x2="114.0" y2="211.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="114.0" y1="249.0" x2="114.0" y2="259.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="230.0" x2="628.0" y2="230.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="297.0" x2="114.0" y2="307.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="278.0" x2="628.0" y2="278.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="345.0" x2="114.0" y2="355.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="326.0" x2="628.0" y2="326.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="393.0" x2="114.0" y2="403.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="374.0" x2="628.0" y2="374.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="441.0" x2="114.0" y2="451.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="556.0" y1="422.0" x2="628.0" y2="422.0" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="114.0" y1="489.0" x2="114.0" y2="499.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<line x1="114.0" y1="537.0" x2="114.0" y2="549.0" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr0)"/>
+<text x="14.0" y="29.0" font-size="15" text-anchor="start" fill="#1f2937" font-weight="600">Десять шагов: ответ «нет» на семи из них заканчивается записью «ждать»</text>
+<text x="14.0" y="50.0" font-size="12" text-anchor="start" fill="#6b7280">Шаги идут сверху вниз; сделка открывается только после шага 10</text>
+<text x="26.0" y="91.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">1. Календарь</text>
+<text x="204.0" y="91.0" font-size="13.5" text-anchor="start" fill="#1f2937">Вне окна ±30 минут от новости?</text>
+<text x="542.0" y="91.0" font-size="12.5" text-anchor="end" fill="#6b7280" font-weight="600">новости</text>
+<text x="592.0" y="80.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="139.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">2. Тренд</text>
+<text x="204.0" y="139.0" font-size="13.5" text-anchor="start" fill="#1f2937">Есть ли тренд вверх или вниз?</text>
+<text x="542.0" y="139.0" font-size="12.5" text-anchor="end" fill="#2563eb" font-weight="600">1D</text>
+<text x="592.0" y="128.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="187.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">3. Зоны</text>
+<text x="204.0" y="187.0" font-size="13.5" text-anchor="start" fill="#1f2937">Где поддержка и сопротивление?</text>
+<text x="542.0" y="187.0" font-size="12.5" text-anchor="end" fill="#2563eb" font-weight="600">1D, 1W</text>
+<text x="26.0" y="235.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">4. Место цены</text>
+<text x="204.0" y="235.0" font-size="13.5" text-anchor="start" fill="#1f2937">Цена у зоны по тренду?</text>
+<text x="542.0" y="235.0" font-size="12.5" text-anchor="end" fill="#2563eb" font-weight="600">1D</text>
+<text x="592.0" y="224.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="283.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">5. Сетап</text>
+<text x="204.0" y="283.0" font-size="13.5" text-anchor="start" fill="#1f2937">Есть ли откат к зоне?</text>
+<text x="542.0" y="283.0" font-size="12.5" text-anchor="end" fill="#15803d" font-weight="600">4H</text>
+<text x="592.0" y="272.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="331.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">6. Триггер</text>
+<text x="204.0" y="331.0" font-size="13.5" text-anchor="start" fill="#1f2937">Закрылась ли свеча подтверждения?</text>
+<text x="542.0" y="331.0" font-size="12.5" text-anchor="end" fill="#15803d" font-weight="600">4H</text>
+<text x="592.0" y="320.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="379.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">7. Вход, стоп, цель</text>
+<text x="204.0" y="379.0" font-size="13.5" text-anchor="start" fill="#1f2937">R:R не меньше 1:2?</text>
+<text x="542.0" y="379.0" font-size="12.5" text-anchor="end" fill="#15803d" font-weight="600">4H</text>
+<text x="592.0" y="368.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="427.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">8. Размер позиции</text>
+<text x="204.0" y="427.0" font-size="13.5" text-anchor="start" fill="#1f2937">Лимиты риска не нарушены?</text>
+<text x="542.0" y="427.0" font-size="12.5" text-anchor="end" fill="#b45309" font-weight="600">расчёт</text>
+<text x="592.0" y="416.0" font-size="12.5" text-anchor="middle" fill="#b91c1c" font-weight="600">нет</text>
+<text x="26.0" y="475.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">9. Журнал</text>
+<text x="204.0" y="475.0" font-size="13.5" text-anchor="start" fill="#1f2937">Идея записана, скриншоты сделаны?</text>
+<text x="542.0" y="475.0" font-size="12.5" text-anchor="end" fill="#b45309" font-weight="600">запись</text>
+<text x="26.0" y="523.0" font-size="14" text-anchor="start" fill="#1f2937" font-weight="700">10. Ордера</text>
+<text x="204.0" y="523.0" font-size="13.5" text-anchor="start" fill="#1f2937">Стоп и цель стоят на бирже?</text>
+<text x="542.0" y="523.0" font-size="12.5" text-anchor="end" fill="#b45309" font-weight="600">биржа</text>
+<text x="688.0" y="246.0" font-size="20" text-anchor="middle" fill="#b45309" font-weight="700">Ждать</text>
+<text x="688.0" y="268.0" font-size="12.5" text-anchor="middle" fill="#6b7280">и оповещение</text>
+<text x="688.0" y="285.0" font-size="12.5" text-anchor="middle" fill="#6b7280">у зоны</text>
+<text x="284.0" y="572.0" font-size="13.5" text-anchor="middle" fill="#15803d" font-weight="700">Сделка открыта: вход, стоп и тейк-профит на бирже</text>
+</svg>

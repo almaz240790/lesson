@@ -14,9 +14,9 @@ export interface StepProgress {
   testPassed: boolean
   /** Все условия ступени выполнены. */
   completed: boolean
-  /** Предыдущая ступень пройдена (или это первая, или отдельный трек). */
+  /** Ступень открыта. Замков нет, поэтому всегда true; поле оставлено для экранов. */
   unlocked: boolean
-  /** Все уроки и практика выполнены — тест открыт. */
+  /** Тест открыт. Замков нет, поэтому всегда true; порядок «уроки → практика → тест» — только совет. */
   testAvailable: boolean
   /** Ступень есть в текущей версии приложения. */
   available: boolean
@@ -37,7 +37,6 @@ export function useProgress(): Progress | undefined {
     const doneLessonIds = new Set(lessons.map((l) => l.id))
     const donePracticeIds = new Set(practice.map((p) => p.id))
 
-    let prevCompleted = true
     const sp: StepProgress[] = steps.map((step) => {
       const lessonsDone = step.lessons.filter((l) => doneLessonIds.has(l.id)).length
       const practiceTotal = step.practice?.items.length ?? 0
@@ -48,8 +47,7 @@ export function useProgress(): Progress | undefined {
       const testPassed = hasTest ? Boolean(bestTest && bestTest.percent >= PASS_PERCENT) : true
       const theoryDone = lessonsDone === step.lessons.length && practiceDone === practiceTotal
       const completed = theoryDone && testPassed
-      const unlocked = step.standalone ? true : prevCompleted
-      if (!step.standalone) prevCompleted = completed
+      const unlocked = true
       const units = step.lessons.length + practiceTotal + (hasTest ? 1 : 0)
       const doneUnits = lessonsDone + practiceDone + (hasTest && testPassed ? 1 : 0)
       return {
@@ -60,7 +58,7 @@ export function useProgress(): Progress | undefined {
         practiceTotal,
         bestTest,
         testPassed,
-        testAvailable: theoryDone,
+        testAvailable: true,
         completed,
         unlocked,
         available: AVAILABLE_STEPS.has(step.id),

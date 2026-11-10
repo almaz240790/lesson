@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { stepById, tests } from '../content'
 import { useProgress } from '../lib/progress'
 import { ProgressBar } from '../components/ProgressBar'
+import { BookPage } from './BookPage'
 
 export function StepPage() {
   const { stepId = '' } = useParams()
@@ -11,6 +12,7 @@ export function StepPage() {
   if (!progress) return null
   const sp = progress.steps.find((s) => s.step.id === stepId)!
   if (!sp.unlocked || !sp.available) return <Navigate to="/" replace />
+  if (step.book) return <BookPage step={step} />
   const test = tests[stepId]
   const allLessonsDone = sp.lessonsDone === sp.lessonsTotal
   const practiceDone = sp.practiceDone === sp.practiceTotal
@@ -25,13 +27,21 @@ export function StepPage() {
       <h1>{step.standalone ? step.title : `Ступень ${step.id}. ${step.title}`}</h1>
       <p className="muted">{step.short}</p>
       <div style={{ margin: '12px 0 20px' }}>
-        <ProgressBar percent={sp.percent} label="Прогресс ступени" />
+        <ProgressBar percent={sp.percent} label={step.book ? 'Прочитано' : 'Прогресс ступени'} />
         <div className="small muted" style={{ marginTop: 4 }}>
-          {sp.completed ? (step.standalone ? 'Уровень пройден' : 'Ступень пройдена') : `${sp.percent}% — уроки, практика и тест на 80%+ ${step.standalone ? 'завершают уровень' : 'открывают следующую ступень'}`}
+          {step.book
+            ? sp.completed
+              ? 'Учебник прочитан'
+              : `${sp.percent}% — отмечайте главы по мере чтения`
+            : sp.completed
+              ? step.standalone
+                ? 'Уровень пройден'
+                : 'Ступень пройдена'
+              : `${sp.percent}% — уроки, практика и тест на 80%+ ${step.standalone ? 'завершают уровень' : 'завершают ступень'}`}
         </div>
       </div>
 
-      <h2>Уроки</h2>
+      <h2>{step.book ? 'Главы' : 'Уроки'}</h2>
       <div className="list" style={{ marginBottom: 20 }}>
         {step.lessons.map((l, i) => {
           const done = progress.doneLessonIds.has(l.id)
@@ -39,7 +49,7 @@ export function StepPage() {
             <Link key={l.id} to={`/step/${step.id}/lesson/${l.id}`} className="item">
               <div className={`num ${done ? 'done' : ''}`}>{done ? '✓' : i + 1}</div>
               <div className="body">
-                <div className="title">{l.title.replace(/^Урок \d+\.\s*/, '')}</div>
+                <div className="title">{l.title.replace(/^(Урок|Глава) \d+\.\s*/, '')}</div>
               </div>
               <span className="chev" aria-hidden="true">
                 ›
@@ -109,7 +119,7 @@ export function StepPage() {
             })()}
           </div>
           <p className="muted small" style={{ marginTop: 10 }}>
-            Порядок прохождения: уроки → практика → тест. Тест открывается, когда отмечены все уроки и выполнена практика.
+            Советуем идти по порядку: уроки → практика → тест. Тест можно открыть в любой момент.
           </p>
         </>
       )}

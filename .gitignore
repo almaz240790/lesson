@@ -12,3 +12,5 @@ app/ios/App/.build
 app/ios/App/DerivedData
 *.log
 .claude/
+__pycache__/
+*.pyc
