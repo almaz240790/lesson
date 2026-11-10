@@ -33,12 +33,21 @@ const STEPS = [
 const read = (p) => readFileSync(p, 'utf8').replace(/\r\n/g, '\n')
 const titleOf = (md, fallback) => (md.match(/^#\s+(.+)$/m)?.[1] ?? fallback).trim()
 const bodyOf = (md) => md.replace(/^#\s+.+\n/, '').trim()
-// Учебник: рисунки копируются в public/textbook, ссылки между главами ведут на экраны приложения,
-// остальные относительные ссылки (на файлы курса) превращаются в обычный текст.
+// Учебник: рисунки копируются в public/textbook; ссылки между главами, на уроки, практику и тесты курса
+// и на справочник ведут на экраны приложения; остальные относительные ссылки превращаются в обычный текст.
 const bookBody = (md, stepId) =>
   md
     .replace(/\]\(img\/([0-9a-z-]+\.svg)\)/g, '](textbook/$1)')
     .replace(/(?<!!)\[([^\]]+)\]\((\d\d)_[^)\s]+\.md(?:#[^)]*)?\)/g, (_, label, n) => `[${label}](#/step/${stepId}/lesson/${stepId}-${n})`)
+    .replace(/(?<!!)\[([^\]]+)\]\(\.\.\/(\d\d)_[^/)\s]+\/([^)\s]+?)\.md(?:#[^)]*)?\)/g, (all, label, dir, file) => {
+      const step = STEPS.find((x) => x.id === dir)
+      if (dir === '07') return `[${label}](#/reference)`
+      if (!step) return label
+      if (/^\d\d_/.test(file) && existsSync(join(root, step.dir, `${file}.md`))) return `[${label}](#/step/${dir}/lesson/${dir}-${file.slice(0, 2)})`
+      if (file === 'Практика') return `[${label}](#/step/${dir}/practice)`
+      if (file === 'Тест' && existsSync(join(here, '..', 'src', 'content', 'tests', `${dir}.json`))) return `[${label}](#/step/${dir}/test)`
+      return `[${label}](#/step/${dir})`
+    })
     .replace(/(?<!!)\[([^\]]+)\]\((?!https?:|#|mailto:)[^)\s]+\)/g, '$1')
 
 const checklist = (md) => [...md.matchAll(/^- \[[ x]\]\s+(.+(?:\n {2}.+)*)$/gm)].map((m) => m[1].replace(/\n {2}/g, ' ').trim())

@@ -75,8 +75,8 @@ export const reference = referenceJson as {
   checklist: { title: string; intro: string; items: string[] }
 }
 
-/** Ступени, доступные в текущей версии приложения (версия 1: ступень 01, уровень профи и учебник). */
-export const AVAILABLE_STEPS = new Set(['01', '09', '10'])
+/** Ступени, доступные в приложении. Замков нет: открыты все ступени, уровень профи и учебник. */
+export const AVAILABLE_STEPS = new Set(steps.map((s) => s.id))
 
 /** Уроки, в которых показывается учебный график. */
 export const lessonCharts: Record<string, { symbol: 'btc' | 'eth'; interval: '1d' | '4h'; title: string }> = {
