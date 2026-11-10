@@ -590,7 +590,7 @@ class Chart:
         for p in self.panels:
             ptop = frame(p.height, p.label)
             vals = [v for values, _, _ in p.items for v in values[:len(self.c)] if v is not None]
-            vals += [m[2] for m in p.marks if m[0] != 'line'] + [q[1] for m in p.marks if m[0] == 'line' for q in (m[1], m[2])]
+            vals += [m[1] for m in p.marks if m[0] != 'line'] + [q[1] for m in p.marks if m[0] == 'line' for q in (m[1], m[2])]
             vals += list(p.hlines)
             plo = min(vals) if p.ymin is None else p.ymin
             phi = max(vals) if p.ymax is None else p.ymax
