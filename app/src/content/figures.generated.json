@@ -1,0 +1,214 @@
+{
+ "textbook/01-equity-curves.svg": [
+  760,
+  430
+ ],
+ "textbook/02-liquidation-distance.svg": [
+  760,
+  374
+ ],
+ "textbook/02-order-book.svg": [
+  760,
+  442
+ ],
+ "textbook/02-three-orders.svg": [
+  760,
+  406
+ ],
+ "textbook/03-candle-anatomy.svg": [
+  760,
+  380
+ ],
+ "textbook/03-candle-types.svg": [
+  760,
+  400
+ ],
+ "textbook/03-day-six-candles.svg": [
+  960,
+  398
+ ],
+ "textbook/03-volume-by-slot.svg": [
+  760,
+  380
+ ],
+ "textbook/04-break-real.svg": [
+  760,
+  478
+ ],
+ "textbook/04-nested.svg": [
+  760,
+  405
+ ],
+ "textbook/04-three-states.svg": [
+  760,
+  396
+ ],
+ "textbook/04-uptrend-real.svg": [
+  760,
+  438
+ ],
+ "textbook/05-channel-btc-2022.svg": [
+  760,
+  428
+ ],
+ "textbook/05-fib-confluence.svg": [
+  760,
+  396
+ ],
+ "textbook/05-role-reversal-btc.svg": [
+  760,
+  428
+ ],
+ "textbook/05-stop-sweep.svg": [
+  760,
+  396
+ ],
+ "textbook/05-zone-borders.svg": [
+  760,
+  376
+ ],
+ "textbook/06-candle-patterns.svg": [
+  760,
+  470
+ ],
+ "textbook/06-continuation.svg": [
+  760,
+  400
+ ],
+ "textbook/06-double-bottom-real.svg": [
+  760,
+  450
+ ],
+ "textbook/06-reversal.svg": [
+  760,
+  400
+ ],
+ "textbook/07-atr-volume.svg": [
+  760,
+  532
+ ],
+ "textbook/07-ema-cross.svg": [
+  760,
+  450
+ ],
+ "textbook/07-macd.svg": [
+  760,
+  510
+ ],
+ "textbook/07-rsi-divergence.svg": [
+  760,
+  510
+ ],
+ "textbook/07-rsi-trend.svg": [
+  760,
+  490
+ ],
+ "textbook/08-btc-1d-zone.svg": [
+  760,
+  440
+ ],
+ "textbook/08-btc-1w-trend.svg": [
+  760,
+  408
+ ],
+ "textbook/08-btc-4h-setup.svg": [
+  760,
+  450
+ ],
+ "textbook/08-three-timeframes.svg": [
+  760,
+  372
+ ],
+ "textbook/09-algorithm-flow.svg": [
+  760,
+  606
+ ],
+ "textbook/09-btc-1d-context.svg": [
+  760,
+  450
+ ],
+ "textbook/09-btc-4h-loss.svg": [
+  760,
+  428
+ ],
+ "textbook/09-btc-4h-trade.svg": [
+  760,
+  520
+ ],
+ "textbook/10-breakout-retest-btc-loss.svg": [
+  760,
+  508
+ ],
+ "textbook/10-false-breakout-btc.svg": [
+  760,
+  508
+ ],
+ "textbook/10-model-breakout-retest.svg": [
+  760,
+  476
+ ],
+ "textbook/10-model-false-breakout.svg": [
+  760,
+  456
+ ],
+ "textbook/10-model-pullback.svg": [
+  760,
+  406
+ ],
+ "textbook/11-btc-eth-together.svg": [
+  800,
+  590
+ ],
+ "textbook/11-equity-risk.svg": [
+  760,
+  520
+ ],
+ "textbook/11-loss-asymmetry.svg": [
+  760,
+  420
+ ],
+ "textbook/11-stop-distance-size.svg": [
+  760,
+  570
+ ],
+ "textbook/12-management-compare.svg": [
+  760,
+  520
+ ],
+ "textbook/12-partial-breakeven.svg": [
+  760,
+  376
+ ],
+ "textbook/12-stop-close-vs-structure.svg": [
+  760,
+  376
+ ],
+ "textbook/12-trail-structure-real.svg": [
+  760,
+  460
+ ],
+ "textbook/13-backtest-trades.svg": [
+  760,
+  460
+ ],
+ "textbook/13-equity-curve.svg": [
+  760,
+  400
+ ],
+ "textbook/13-system-cycle.svg": [
+  760,
+  330
+ ],
+ "textbook/14-rules-vs-violations.svg": [
+  760,
+  400
+ ],
+ "textbook/14-tilt-loop.svg": [
+  760,
+  400
+ ],
+ "textbook/15-roadmap.svg": [
+  760,
+  722
+ ]
+}

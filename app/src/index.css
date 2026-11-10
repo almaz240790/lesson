@@ -319,6 +319,11 @@ mark { background: var(--up-soft); color: inherit; padding: 0 2px; border-radius
 .md th, .md td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
 .md th { background: var(--surface-2); }
 .md img { display: block; max-width: 100%; height: auto; margin: 0.6em auto; border-radius: 10px; border: 1px solid var(--border); background: #fff; }
+.book-chapter { scroll-margin-top: 8px; }
+.book-chapter > h1 { margin-top: 0; }
+.book-end { height: 1px; }
+button.book-toc-item { width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.book-up { position: fixed; right: 12px; bottom: calc(var(--nav-h) + 12px + env(safe-area-inset-bottom)); z-index: 5; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18); }
 .md blockquote { margin: 0 0 1em; padding: 8px 14px; border-left: 3px solid var(--border); color: var(--text-muted); }
 
 /* ---------- График ---------- */

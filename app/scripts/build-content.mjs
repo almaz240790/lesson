@@ -35,8 +35,14 @@ const titleOf = (md, fallback) => (md.match(/^#\s+(.+)$/m)?.[1] ?? fallback).tri
 const bodyOf = (md) => md.replace(/^#\s+.+\n/, '').trim()
 // Учебник: рисунки копируются в public/textbook; ссылки между главами, на уроки, практику и тесты курса
 // и на справочник ведут на экраны приложения; остальные относительные ссылки превращаются в обычный текст.
+const courseLinksLast = (md) => {
+  const m = md.match(/^\*\*Связь с курсом:\*\*\s*(.+)\n+/m)
+  if (!m) return md
+  return `${md.replace(m[0], '').trimEnd()}\n\n**Закрепить в курсе — короткие уроки по теме главы:** ${m[1]}\n`
+}
+
 const bookBody = (md, stepId) =>
-  md
+  courseLinksLast(md)
     .replace(/\]\(img\/([0-9a-z-]+\.svg)\)/g, '](textbook/$1)')
     .replace(/(?<!!)\[([^\]]+)\]\((\d\d)_[^)\s]+\.md(?:#[^)]*)?\)/g, (_, label, n) => `[${label}](#/step/${stepId}/lesson/${stepId}-${n})`)
     .replace(/(?<!!)\[([^\]]+)\]\(\.\.\/(\d\d)_[^/)\s]+\/([^)\s]+?)\.md(?:#[^)]*)?\)/g, (all, label, dir, file) => {
@@ -83,7 +89,13 @@ for (const s of STEPS.filter((x) => x.book)) {
   const dst = join(here, '..', 'public', 'textbook')
   rmSync(dst, { recursive: true, force: true })
   mkdirSync(dst, { recursive: true })
-  for (const f of readdirSync(src).filter((x) => x.endsWith('.svg'))) copyFileSync(join(src, f), join(dst, f))
+  const sizes = {}
+  for (const f of readdirSync(src).filter((x) => x.endsWith('.svg')).sort()) {
+    copyFileSync(join(src, f), join(dst, f))
+    const m = read(join(src, f)).match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/)
+    if (m) sizes[`textbook/${f}`] = [Math.round(Number(m[1])), Math.round(Number(m[2]))]
+  }
+  writeFileSync(join(out, 'figures.generated.json'), JSON.stringify(sizes, null, 1))
 }
 
 // Справочник

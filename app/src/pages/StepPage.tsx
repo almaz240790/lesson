@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { stepById, tests } from '../content'
 import { useProgress } from '../lib/progress'
 import { ProgressBar } from '../components/ProgressBar'
+import { BookPage } from './BookPage'
 
 export function StepPage() {
   const { stepId = '' } = useParams()
@@ -11,6 +12,7 @@ export function StepPage() {
   if (!progress) return null
   const sp = progress.steps.find((s) => s.step.id === stepId)!
   if (!sp.unlocked || !sp.available) return <Navigate to="/" replace />
+  if (step.book) return <BookPage step={step} />
   const test = tests[stepId]
   const allLessonsDone = sp.lessonsDone === sp.lessonsTotal
   const practiceDone = sp.practiceDone === sp.practiceTotal

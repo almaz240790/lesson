@@ -16,6 +16,8 @@ export function LessonPage() {
   const lesson = step?.lessons[idx]
   const progress = useProgress()
   if (!step || !lesson) return <Navigate to="/" replace />
+  // Учебник читается одной страницей: старые адреса глав ведут на нужное место в ней.
+  if (step.book) return <Navigate to={`/step/${step.id}`} state={{ chapter: lesson.id }} replace />
   if (!progress) return null
   const done = progress.doneLessonIds.has(lesson.id)
   const nextLesson = step.lessons[idx + 1]

@@ -1,5 +1,8 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import figureSizes from '../content/figures.generated.json'
+
+const sizes = figureSizes as Record<string, number[]>
 
 export function Markdown({ children }: { children: string }) {
   return (
@@ -15,7 +18,13 @@ export function Markdown({ children }: { children: string }) {
           // Рисунок открывается в полном размере по нажатию: на телефоне подписи мелкие.
           img: ({ src, alt }) => (
             <a href={typeof src === 'string' ? src : undefined} target="_blank" rel="noreferrer">
-              <img src={typeof src === 'string' ? src : undefined} alt={alt ?? ''} loading="lazy" />
+              <img
+                src={typeof src === 'string' ? src : undefined}
+                alt={alt ?? ''}
+                loading="lazy"
+                width={typeof src === 'string' ? sizes[src]?.[0] : undefined}
+                height={typeof src === 'string' ? sizes[src]?.[1] : undefined}
+              />
             </a>
           ),
           a: ({ href, children }) =>
