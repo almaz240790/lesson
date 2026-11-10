@@ -39,6 +39,7 @@ const bodyOf = (md) => md.replace(/^#\s+.+\n/, '').trim()
 const bookBody = (md) =>
   md
     .replace(/^\*\*Связь с курсом:\*\*.*\n+/m, '')
+    .replace(/ из строки «Связь с курсом»/g, ' по теме главы')
     .replace(/\]\(img\/([0-9a-z-]+\.svg)\)/g, '](textbook/$1)')
     .replace(/(?<!!)\[([^\]]+)\]\((?!https?:|mailto:)[^)\s]+\)/g, '$1')
 
