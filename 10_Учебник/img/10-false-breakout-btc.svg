@@ -398,7 +398,7 @@
 <text x="595.1" y="174.9" font-size="12" text-anchor="middle" fill="#15803d" font-weight="600" stroke="#ffffff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">Цель, +2,01R</text>
 <text x="591.9" y="316.3" font-size="11.5" text-anchor="end" fill="#2563eb" font-weight="600" stroke="#ffffff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">Вход 92 124</text>
 <text x="591.9" y="381.1" font-size="11.5" text-anchor="end" fill="#b91c1c" font-weight="600" stroke="#ffffff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">Стоп 88 503</text>
-<text x="591.9" y="186.1" font-size="11.5" text-anchor="end" fill="#15803d" font-weight="600" stroke="#ffffff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">Цель, R:R 1:2,0 99 400</text>
+<text x="591.9" y="186.1" font-size="11.5" text-anchor="end" fill="#15803d" font-weight="600" stroke="#ffffff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">Цель 99 400</text>
 <rect x="688.0" y="312.3" width="45.4" height="18.0" fill="#2563eb" stroke="none" rx="3"/>
 <text x="692.0" y="325.3" font-size="11" text-anchor="start" fill="#ffffff" font-weight="600">92 124</text>
 <rect x="688.0" y="377.1" width="45.4" height="18.0" fill="#b91c1c" stroke="none" rx="3"/>

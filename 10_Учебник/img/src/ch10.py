@@ -115,6 +115,6 @@ ch.mark(i2, cs[i2]['l'], 'Касание 9 января', where='below')
 ch.mark(ip, cs[ip]['l'], 'Прокол: минимум 89 257, закрытие 92 124, объём ×5,2', where='left', color=BLUE)
 ch.mark(it_, cs[it_]['h'], 'Цель, +2,01R', where='above', color=GREEN)
 ch.trade(ip, 92124, 88503, 99400, i_end=it_,
-         labels=('Вход', 'Стоп', 'Цель, R:R 1:2,0'), show_rr=False)
+         labels=('Вход', 'Стоп', 'Цель'), show_rr=False)
 ch.volume()
 ch.save('10-false-breakout-btc.svg')
