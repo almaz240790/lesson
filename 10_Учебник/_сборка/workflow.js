@@ -1,5 +1,5 @@
 export const meta = {
-  name: 'trader-textbook-chapters',
+  name: 'trader-textbook-economy',
   description: 'Пишет, иллюстрирует и независимо перепроверяет главы учебника трейдера в папке 10_Учебник',
   phases: [
     { title: 'Write', detail: 'автор главы: текст, примеры на реальных свечах, упражнения' },
@@ -318,6 +318,11 @@ const REVIEW_SCHEMA = {
   required: ['verdict', 'fixes', 'unresolved'],
 }
 
+
+const ECON_W = (c) => 'Экономия ресурса обязательна: на главу — не больше примерно 40 вызовов инструментов. (1) Полный текст главы запишите в файл как можно раньше, одним вызовом, и только потом уточняйте: работа может быть прервана, а записанный файл сохранится. (2) В ' + S + '/analysis/ могут лежать скрипты ch' + c.n + '_*.py предыдущего автора этой главы: сначала прочитайте их и используйте, не начинайте анализ данных с нуля. (3) Не больше двух-трёх реальных примеров и не больше четырёх рисунков в заказе (в главе 10 — пять). (4) Не больше четырёх веб-запросов; что не подтвердилось быстро — пишите без конкретных чисел и имён. (5) Черновые графики стройте только когда без них нельзя убедиться в примере.'
+const ECON_I = 'Экономия ресурса обязательна: не больше трёх циклов «правка → рендер → просмотр» на рисунок; все рисунки главы рендерьте одной командой; главу читайте один раз. Рисунки, на которые в тексте нет ссылки, не стройте.'
+const ECON_R = 'Экономия ресурса обязательна: не больше примерно 45 вызовов инструментов. Приоритеты: сначала пункты 1, 2, 4, 8 и 10, затем 5, 9, 6, 7. По пункту 3 откройте не больше четырёх источников — в первую очередь для чисел и цитат; остальные ссылки оцените на правдоподобие и уберите сомнительные. Исправления вносите в файл сразу, по мере нахождения.'
+
 const common = (c) => [
   'Правила проекта — прочитайте файл целиком и соблюдайте: ' + GUIDE,
   'Репозиторий: ' + REPO + '. Папка учебника: ' + BOOK + '.',
@@ -331,6 +336,7 @@ const writePrompt = (c) => [
   '',
   common(c),
   'Объём главы: ' + c.words + ' слов по счётчику check.py.',
+  ECON_W(c),
   '',
   'Уроки курса, которые глава раскрывает (прочитайте, учебник не должен им противоречить): ' + c.course.map(p => REPO + '/' + p).join(', '),
   '',
@@ -362,10 +368,11 @@ const illPrompt = (c, w) => [
   '',
   common(c),
   '',
+  ECON_I,
   'В GUIDE особенно важны разделы 7, 8 и 10. Прочитайте докстринги ' + BOOK + '/img/src/figlib.py (менять этот файл нельзя). Затем прочитайте главу целиком.',
   '',
   'Рисунки, которые заказал автор (JSON):',
-  JSON.stringify(w.figures || [], null, 1),
+  (w.figures ? JSON.stringify(w.figures, null, 1) : 'Автор спецификаций не оставил: список рисунков возьмите из ссылок img/… и подписей в тексте главы и постройте каждый по тексту.'),
   'Реальные примеры главы по словам автора: ' + JSON.stringify(w.real_examples || []),
   '',
   'Порядок работы:',
@@ -394,6 +401,7 @@ const reviewPrompt = (c, w, i) => [
   'Отчёт иллюстратора: ' + JSON.stringify(i || 'иллюстратор не работал над главой'),
   'Скрипты анализа автора могут лежать в ' + S + '/analysis/ — их можно читать, чтобы понять замысел, но проверять числа нужно своим кодом.',
   '',
+  ECON_R,
   'Что проверить и исправить:',
   '1. Арифметика. Выпишите все расчёты из текста, таблиц, упражнений и ответов и пересчитайте их своим скриптом Python. Исправьте каждое расхождение.',
   '2. Реальные данные. Каждую цену, дату, процент и значение индикатора из истории пересчитайте по свечам своим кодом (GUIDE, раздел 7). Пример не воспроизводится — исправьте числа или замените пример. Статистику и бэктесты пересчитайте независимо и сравните.',
@@ -410,21 +418,29 @@ const reviewPrompt = (c, w, i) => [
   'В ответе верните: verdict (ok — ошибок не найдено; fixed — найдены и исправлены; needs_work — остались нерешённые), число слов, прошла ли check.py, список исправлений (что было → что стало), список нерешённого и список реально открытых источников.',
 ].join('\n')
 
-const want = args && args.chapters ? CH.filter(c => args.chapters.includes(c.n)) : CH
-log('Главы в этом потоке: ' + want.map(c => c.n).join(', '))
+const order = args && args.chapters ? args.chapters : CH.map(c => c.n)
+const drafts = new Set((args && args.drafts) || [])
+const want = order.map(n => CH.find(c => c.n === n)).filter(Boolean)
+log('Главы в этом потоке: ' + want.map(c => c.n + (drafts.has(c.n) ? ' (текст готов)' : '')).join(', '))
 
 const results = await pipeline(
   want,
-  (c) => agent(writePrompt(c), { label: 'write:' + c.n, phase: 'Write', schema: WRITE_SCHEMA }),
+  (c) => drafts.has(c.n)
+    ? { file: c.file, words: 0, figures: null, notes: 'Текст главы написан в предыдущем запуске; автор не успел вернуть заметки и спецификации рисунков.' }
+    : agent(writePrompt(c), { label: 'write:' + c.n, phase: 'Write', schema: WRITE_SCHEMA }),
   (w, c) => {
     if (!w) return { w: null, i: null }
-    if (!w.figures || !w.figures.length) return { w, i: null }
-    return agent(illPrompt(c, w), { label: 'illustrate:' + c.n, phase: 'Illustrate', schema: ILL_SCHEMA }).then(i => ({ w, i }))
+    if (w.figures && !w.figures.length) return { w, i: null }
+    const p = illPrompt(c, w)
+    const o = { label: 'illustrate:' + c.n, phase: 'Illustrate', schema: ILL_SCHEMA }
+    return agent(p, { ...o, model: 'sonnet' }).catch(() => agent(p, o)).then(i => ({ w, i }))
   },
   (wi, c) => {
     if (!wi || !wi.w) return { n: c.n, file: c.file, failed: 'write' }
-    return agent(reviewPrompt(c, wi.w, wi.i), { label: 'review:' + c.n, phase: 'Review', schema: REVIEW_SCHEMA })
-      .then(r => ({ n: c.n, file: c.file, words_written: wi.w.words, figures_ordered: (wi.w.figures || []).length, author_notes: wi.w.notes || '', illustrate: wi.i, review: r }))
+    const p = reviewPrompt(c, wi.w, wi.i)
+    const o = { label: 'review:' + c.n, phase: 'Review', schema: REVIEW_SCHEMA }
+    return agent(p, { ...o, model: 'opus' }).catch(() => agent(p, o))
+      .then(r => ({ n: c.n, file: c.file, figures: wi.i ? (wi.i.figures || []).length : 0, author_notes: (wi.w.notes || '').slice(0, 1500), illustrate_changes: wi.i ? wi.i.text_changes || [] : null, review: r }))
   },
 )
 
