@@ -318,6 +318,7 @@ mark { background: var(--up-soft); color: inherit; padding: 0 2px; border-radius
 .md td, .md th { min-width: 90px; }
 .md th, .md td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
 .md th { background: var(--surface-2); }
+.md img { display: block; max-width: 100%; height: auto; margin: 0.6em auto; border-radius: 10px; border: 1px solid var(--border); background: #fff; }
 .md blockquote { margin: 0 0 1em; padding: 8px 14px; border-left: 3px solid var(--border); color: var(--text-muted); }
 
 /* ---------- График ---------- */

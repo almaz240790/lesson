@@ -19,7 +19,8 @@ export function HomePage() {
   }
 
   const mainSteps = progress.steps.filter((s) => !s.step.standalone)
-  const extraSteps = progress.steps.filter((s) => s.step.standalone)
+  const extraSteps = progress.steps.filter((s) => s.step.standalone && !s.step.book)
+  const bookSteps = progress.steps.filter((s) => s.step.book)
   const stepsDone = mainSteps.filter((s) => s.completed).length
 
   const renderStep = (s: StepProgress) => {
@@ -107,6 +108,18 @@ export function HomePage() {
         </span>
       </div>
       <div className="list">{mainSteps.map(renderStep)}</div>
+
+      {bookSteps.length > 0 && (
+        <>
+          <div className="row spread" style={{ margin: '24px 0 6px' }}>
+            <h2 style={{ margin: 0 }}>Учебник</h2>
+          </div>
+          <p className="muted small" style={{ marginBottom: 10 }}>
+            Полная версия программы: подробные объяснения, примеры на реальных свечах, рисунки, упражнения. Открыт всегда, читать можно параллельно со ступенями.
+          </p>
+          <div className="list">{bookSteps.map(renderStep)}</div>
+        </>
+      )}
 
       {extraSteps.length > 0 && (
         <>

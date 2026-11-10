@@ -12,11 +12,20 @@ export function Markdown({ children }: { children: string }) {
               <table>{children}</table>
             </div>
           ),
-          a: ({ href, children }) => (
-            <a href={href} target="_blank" rel="noreferrer">
-              {children}
+          // Рисунок открывается в полном размере по нажатию: на телефоне подписи мелкие.
+          img: ({ src, alt }) => (
+            <a href={typeof src === 'string' ? src : undefined} target="_blank" rel="noreferrer">
+              <img src={typeof src === 'string' ? src : undefined} alt={alt ?? ''} loading="lazy" />
             </a>
           ),
+          a: ({ href, children }) =>
+            href?.startsWith('#/') ? (
+              <a href={href}>{children}</a>
+            ) : (
+              <a href={href} target="_blank" rel="noreferrer">
+                {children}
+              </a>
+            ),
         }}
       >
         {children}

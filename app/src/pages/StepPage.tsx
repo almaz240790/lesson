@@ -25,13 +25,21 @@ export function StepPage() {
       <h1>{step.standalone ? step.title : `Ступень ${step.id}. ${step.title}`}</h1>
       <p className="muted">{step.short}</p>
       <div style={{ margin: '12px 0 20px' }}>
-        <ProgressBar percent={sp.percent} label="Прогресс ступени" />
+        <ProgressBar percent={sp.percent} label={step.book ? 'Прочитано' : 'Прогресс ступени'} />
         <div className="small muted" style={{ marginTop: 4 }}>
-          {sp.completed ? (step.standalone ? 'Уровень пройден' : 'Ступень пройдена') : `${sp.percent}% — уроки, практика и тест на 80%+ ${step.standalone ? 'завершают уровень' : 'открывают следующую ступень'}`}
+          {step.book
+            ? sp.completed
+              ? 'Учебник прочитан'
+              : `${sp.percent}% — отмечайте главы по мере чтения`
+            : sp.completed
+              ? step.standalone
+                ? 'Уровень пройден'
+                : 'Ступень пройдена'
+              : `${sp.percent}% — уроки, практика и тест на 80%+ ${step.standalone ? 'завершают уровень' : 'открывают следующую ступень'}`}
         </div>
       </div>
 
-      <h2>Уроки</h2>
+      <h2>{step.book ? 'Главы' : 'Уроки'}</h2>
       <div className="list" style={{ marginBottom: 20 }}>
         {step.lessons.map((l, i) => {
           const done = progress.doneLessonIds.has(l.id)
@@ -39,7 +47,7 @@ export function StepPage() {
             <Link key={l.id} to={`/step/${step.id}/lesson/${l.id}`} className="item">
               <div className={`num ${done ? 'done' : ''}`}>{done ? '✓' : i + 1}</div>
               <div className="body">
-                <div className="title">{l.title.replace(/^Урок \d+\.\s*/, '')}</div>
+                <div className="title">{l.title.replace(/^(Урок|Глава) \d+\.\s*/, '')}</div>
               </div>
               <span className="chev" aria-hidden="true">
                 ›

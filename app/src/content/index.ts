@@ -28,6 +28,8 @@ export interface Step {
   hasTest: boolean
   /** Отдельный трек: открыт всегда, не входит в цепочку ступеней 01–06. */
   standalone?: boolean
+  /** Учебник: главы для чтения, без практики и теста; показывается отдельным блоком. */
+  book?: boolean
 }
 export interface ChoiceQuestion {
   id: string
@@ -73,8 +75,8 @@ export const reference = referenceJson as {
   checklist: { title: string; intro: string; items: string[] }
 }
 
-/** Ступени, доступные в текущей версии приложения (версия 1: ступень 01 и уровень профи). */
-export const AVAILABLE_STEPS = new Set(['01', '09'])
+/** Ступени, доступные в текущей версии приложения (версия 1: ступень 01, уровень профи и учебник). */
+export const AVAILABLE_STEPS = new Set(['01', '09', '10'])
 
 /** Уроки, в которых показывается учебный график. */
 export const lessonCharts: Record<string, { symbol: 'btc' | 'eth'; interval: '1d' | '4h'; title: string }> = {

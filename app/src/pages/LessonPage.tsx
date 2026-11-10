@@ -52,10 +52,10 @@ export function LessonPage() {
     <>
       <div className="page-title">
         <Link to={`/step/${step.id}`} className="btn btn-sm">
-          ‹ Ступень {step.id}
+          ‹ {step.book ? step.title : `Ступень ${step.id}`}
         </Link>
         <span className="muted small">
-          Урок {idx + 1} из {step.lessons.length}
+          {step.book ? 'Глава' : 'Урок'} {idx + 1} из {step.lessons.length}
         </span>
       </div>
       <h1>{lesson.title}</h1>
@@ -68,15 +68,15 @@ export function LessonPage() {
       <div className="stack" style={{ marginTop: 8 }}>
         {done ? (
           <>
-            <div className="notice up">Урок отмечен как пройденный.</div>
+            <div className="notice up">{step.book ? 'Глава отмечена как прочитанная.' : 'Урок отмечен как пройденный.'}</div>
             <div className="row">
               {nextLesson ? (
                 <Link to={`/step/${step.id}/lesson/${nextLesson.id}`} className="btn btn-primary" style={{ flex: 1 }}>
-                  Следующий урок ›
+                  {step.book ? 'Следующая глава ›' : 'Следующий урок ›'}
                 </Link>
               ) : (
                 <Link to={`/step/${step.id}`} className="btn btn-primary" style={{ flex: 1 }}>
-                  К практике и тесту ›
+                  {step.book ? 'К оглавлению ›' : 'К практике и тесту ›'}
                 </Link>
               )}
               <button type="button" className="btn btn-sm" onClick={() => unmarkLessonDone(lesson.id)}>
@@ -86,7 +86,7 @@ export function LessonPage() {
           </>
         ) : (
           <button type="button" className="btn btn-up btn-block" onClick={finish}>
-            Урок пройден
+            {step.book ? 'Глава прочитана' : 'Урок пройден'}
           </button>
         )}
       </div>
