@@ -120,21 +120,12 @@ export function BookPage({ step }: { step: Step }) {
     else setShown(step.lessons.length)
   }
 
-  // Ссылки «глава N» внутри текста листают эту же страницу, а не открывают новый экран.
-  const onClick = (e: React.MouseEvent) => {
-    const a = (e.target as HTMLElement).closest('a')
-    const m = a?.getAttribute('href')?.match(new RegExp(`^#/step/${step.id}/lesson/(${step.id}-\\d\\d)$`))
-    if (!m) return
-    e.preventDefault()
-    goTo(m[1])
-  }
-
   const done = progress?.doneLessonIds ?? new Set<string>()
   const read = step.lessons.filter((l) => done.has(l.id)).length
   const percent = Math.round((read / step.lessons.length) * 100)
 
   return (
-    <div onClick={onClick}>
+    <div>
       <div className="page-title">
         <Link to="/" className="btn btn-sm" aria-label="Назад к ступеням">
           ‹ Учёба

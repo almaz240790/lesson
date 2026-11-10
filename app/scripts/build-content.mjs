@@ -33,28 +33,14 @@ const STEPS = [
 const read = (p) => readFileSync(p, 'utf8').replace(/\r\n/g, '\n')
 const titleOf = (md, fallback) => (md.match(/^#\s+(.+)$/m)?.[1] ?? fallback).trim()
 const bodyOf = (md) => md.replace(/^#\s+.+\n/, '').trim()
-// Учебник: рисунки копируются в public/textbook; ссылки между главами, на уроки, практику и тесты курса
-// и на справочник ведут на экраны приложения; остальные относительные ссылки превращаются в обычный текст.
-const courseLinksLast = (md) => {
-  const m = md.match(/^\*\*Связь с курсом:\*\*\s*(.+)\n+/m)
-  if (!m) return md
-  return `${md.replace(m[0], '').trimEnd()}\n\n**Закрепить в курсе — короткие уроки по теме главы:** ${m[1]}\n`
-}
-
-const bookBody = (md, stepId) =>
-  courseLinksLast(md)
+// Учебник читается подряд одной страницей, поэтому переходов в нём нет: рисунки копируются в public/textbook,
+// строка «Связь с курсом» убирается, а ссылки на другие главы и уроки курса становятся обычным текстом.
+// Остаются только внешние ссылки на источники.
+const bookBody = (md) =>
+  md
+    .replace(/^\*\*Связь с курсом:\*\*.*\n+/m, '')
     .replace(/\]\(img\/([0-9a-z-]+\.svg)\)/g, '](textbook/$1)')
-    .replace(/(?<!!)\[([^\]]+)\]\((\d\d)_[^)\s]+\.md(?:#[^)]*)?\)/g, (_, label, n) => `[${label}](#/step/${stepId}/lesson/${stepId}-${n})`)
-    .replace(/(?<!!)\[([^\]]+)\]\(\.\.\/(\d\d)_[^/)\s]+\/([^)\s]+?)\.md(?:#[^)]*)?\)/g, (all, label, dir, file) => {
-      const step = STEPS.find((x) => x.id === dir)
-      if (dir === '07') return `[${label}](#/reference)`
-      if (!step) return label
-      if (/^\d\d_/.test(file) && existsSync(join(root, step.dir, `${file}.md`))) return `[${label}](#/step/${dir}/lesson/${dir}-${file.slice(0, 2)})`
-      if (file === 'Практика') return `[${label}](#/step/${dir}/practice)`
-      if (file === 'Тест' && existsSync(join(here, '..', 'src', 'content', 'tests', `${dir}.json`))) return `[${label}](#/step/${dir}/test)`
-      return `[${label}](#/step/${dir})`
-    })
-    .replace(/(?<!!)\[([^\]]+)\]\((?!https?:|#|mailto:)[^)\s]+\)/g, '$1')
+    .replace(/(?<!!)\[([^\]]+)\]\((?!https?:|mailto:)[^)\s]+\)/g, '$1')
 
 const checklist = (md) => [...md.matchAll(/^- \[[ x]\]\s+(.+(?:\n {2}.+)*)$/gm)].map((m) => m[1].replace(/\n {2}/g, ' ').trim())
 
@@ -67,7 +53,7 @@ const steps = STEPS.map((s) => {
       const md = read(join(dir, f))
       const n = f.slice(0, 2)
       const body = bodyOf(md)
-      return { id: `${s.id}-${n}`, file: `${s.dir}/${f.replace(/\.md$/, '')}`, title: titleOf(md, f), body: s.book ? bookBody(body, s.id) : body }
+      return { id: `${s.id}-${n}`, file: `${s.dir}/${f.replace(/\.md$/, '')}`, title: titleOf(md, f), body: s.book ? bookBody(body) : body }
     })
   const practiceFile = files.find((f) => f === 'Практика.md')
   let practice = null
