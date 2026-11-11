@@ -335,8 +335,13 @@ button.book-toc-item { width: 100%; text-align: left; font: inherit; color: inhe
   border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-size: 0.85rem; white-space: nowrap;
 }
 .chart-bar button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.chart-area { height: 320px; width: 100%; }
-@media (min-width: 900px) { .chart-area { height: 400px; } }
+/* --chart-extra — высота панелей RSI и MACD под графиком цены. */
+.chart-area { height: calc(320px + var(--chart-extra, 0px)); width: 100%; }
+.chart-area.compact { height: calc(240px + var(--chart-extra, 0px)); }
+@media (min-width: 900px) {
+  .chart-area { height: calc(400px + var(--chart-extra, 0px)); }
+  .chart-area.compact { height: calc(280px + var(--chart-extra, 0px)); }
+}
 .chart-legend { padding: 8px 12px; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border); display: flex; gap: 14px; flex-wrap: wrap; }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
 

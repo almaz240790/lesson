@@ -46,3 +46,12 @@ export function calcPosition(i: RiskInput): RiskResult | null {
 export const fmtMoney = (v: number, digits = 2) =>
   v.toLocaleString('ru-RU', { minimumFractionDigits: digits, maximumFractionDigits: digits })
 export const fmtNum = (v: number, digits = 2) => v.toLocaleString('ru-RU', { maximumFractionDigits: digits })
+
+/** Цена: у дорогих монет два знака после запятой, у дешёвых — больше. */
+export const fmtPrice = (v: number) => v.toLocaleString('ru-RU', { maximumFractionDigits: v >= 100 ? 2 : v >= 1 ? 4 : 8 })
+
+/** Число из поля ввода: понимает запятую и пробелы. NaN — не число. */
+export const parseNum = (s: string) => {
+  const v = parseFloat(s.replace(',', '.').replace(/\s/g, ''))
+  return Number.isFinite(v) ? v : NaN
+}

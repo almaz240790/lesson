@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
-import { lessonCharts, lessonTasks, stepById } from '../content'
+import { lessonCharts, stepById, tasksOf } from '../content'
 import { markLessonDone, unmarkLessonDone, useProgress } from '../lib/progress'
 import { Markdown } from '../components/Markdown'
 import { ChoiceTask } from '../components/ChoiceTask'
@@ -22,7 +22,7 @@ export function LessonPage() {
   const done = progress.doneLessonIds.has(lesson.id)
   const nextLesson = step.lessons[idx + 1]
   const chart = lessonCharts[lesson.id]
-  const task = lessonTasks[lesson.id]
+  const tasks = tasksOf(lesson.id)
 
   const finish = async () => {
     await markLessonDone(step.id, lesson.id)
@@ -30,23 +30,35 @@ export function LessonPage() {
     else navigate(`/step/${step.id}`)
   }
 
-  const side = (chart || task) && (
+  const side = (chart || tasks.length > 0) && (
     <div>
       {chart && (
         <div className="card">
           <h3>График</h3>
           <p className="muted small">{chart.title}</p>
           <Suspense fallback={<p className="muted">Загрузка графика…</p>}>
-            <CandleChart symbol={chart.symbol} interval={chart.interval} />
+            <CandleChart key={lesson.id} symbol={chart.symbol} interval={chart.interval} emas={chart.emas} rsi={chart.rsi} macd={chart.macd} />
           </Suspense>
         </div>
       )}
-      {task && (
-        <div className="card">
-          <h3>Задание</h3>
-          {task.type === 'calc' ? <NumericTask key={task.id} q={task} /> : <ChoiceTask key={task.id} q={task} />}
+      {tasks.map((task, i) => (
+        <div key={task.id} className="card">
+          <h3>{tasks.length > 1 ? `Задание ${i + 1} из ${tasks.length}` : 'Задание'}</h3>
+          {task.type === 'choice' && task.chart && (
+            <div style={{ marginBottom: 12 }}>
+              <Suspense fallback={<p className="muted">Загрузка графика…</p>}>
+                <CandleChart
+                  symbol={task.chart.symbol}
+                  interval={task.chart.interval}
+                  emas={task.chart.emas}
+                  range={{ from: task.chart.from, to: task.chart.to }}
+                />
+              </Suspense>
+            </div>
+          )}
+          {task.type === 'calc' ? <NumericTask q={task} /> : <ChoiceTask q={task} />}
         </div>
-      )}
+      ))}
     </div>
   )
 
